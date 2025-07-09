@@ -1,0 +1,28 @@
+HTML: (Traversy Media)
+HTML = markup language for creating webpages / documents, building blocks of the web.
+index.html = root / home page of a website
+ctrl + u => shortcut to see tha source code
+- chrome tools are really helpful
+Block level elements = div, h1-h6, p, form
+Inline level elements = span, img, a, input, label
+<strong>, <em> tags are semantic tags used to bold or emphasize the text
+Tag attributes = provide information about an element
+- <ul> tag has padding-left of 40px by default
+Unordered list = usually used for website navigation like at navbar
+Tables = pehle use hote thay 1999s mein for website layout but ab ye recommended nhi hain, ab sirf kisi tabular data ke liye use kiye jaate hain html mein
+Form mein jo attributes hain like action aur method, action mein koi file ya server ka address dete hain jahan form data recieve hote hai aur method mein "POST" ya "GET" dete hain yaani POST for safe data and GET for searching data bcuz it is not safe, data url mein nazar aata hai
+input name attribute = ye bhi server side programming mein use hota hai like jo data server pr jaayega wo usi naam se jaayega jo is name attribute mein dengay ham
+Semantic tags = clearly describe its meaning to both the browser and the developer, they are: <header>, <footer>, <aside>, <main>, <article>, <nav>, <section> and <details>.
+<small> tag is usually used for create dates like sub content
+
+CSS BASICS: (Traversy Media)
+CSS = used for website layout and design, can be extended with Sass/Less
+
+CSS FLEXBOX: (Net Ninja)
+flex-grow = we use it to expand elements into available space by giving each flex item a growth rate
+flex-shrink = we use it to shrink elements as the browser gets smaller by giving each flex item a shirnk rate
+- by default, flex items shrink in proportion to one another at same rate
+flex-basis = minimum width ki tarh kaam krta hai aur same tarh behave krta hai, inital width set krta hai items ki, bs eik farq hai ke minimum width dene pr shrink krne se horizontal scrollbar aata hai jabke flex-basis ka use krke shrink krne se items shrink hojaate hain 
+- minimum width use krke flex grow: 1; krne se sb items grow krke same hojaate hain jabke flex-basis use krke flex-grow: 1; krne se items inital width ke hisaab se hi grow krte hain
+flex-flow = shorthand for flex-direction and flex-flow
+order = default value 0 hoti hai aur agr 0 value khud se di to source code ke according items order hongay, jitni lowest value wo item pehle aayega aur highest order waala item last mein aayega
