@@ -26,3 +26,8 @@ flex-basis = minimum width ki tarh kaam krta hai aur same tarh behave krta hai, 
 - minimum width use krke flex grow: 1; krne se sb items grow krke same hojaate hain jabke flex-basis use krke flex-grow: 1; krne se items inital width ke hisaab se hi grow krte hain
 flex-flow = shorthand for flex-direction and flex-flow
 order = default value 0 hoti hai aur agr 0 value khud se di to source code ke according items order hongay, jitni lowest value wo item pehle aayega aur highest order waala item last mein aayega
+
+CSS Grid (Net Ninja)
+grid rows = automatically create hoti hain when we have content aur column fix hote hain so phr nayi row mein content shift hojaata hai
+grid-auto-rows = container ki property hai jiska use krke ham tamam grid items ki height set krte hain, is mein minmax bhi use kr skte hain
+align-items & justify-content = container property hai jo saaray items ki alignment ke liye use krte hain aur content jitni space le kr items align hojaate hain
