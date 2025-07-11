@@ -1,3 +1,7 @@
+Explore krne waalay topics:
+- floats and clear fix in CSS
+- tracks in CSS Grid
+
 HTML: (Traversy Media)
 HTML = markup language for creating webpages / documents, building blocks of the web.
 index.html = root / home page of a website
@@ -31,3 +35,32 @@ CSS Grid (Net Ninja)
 grid rows = automatically create hoti hain when we have content aur column fix hote hain so phr nayi row mein content shift hojaata hai
 grid-auto-rows = container ki property hai jiska use krke ham tamam grid items ki height set krte hain, is mein minmax bhi use kr skte hain
 align-items & justify-content = container property hai jo saaray items ki alignment ke liye use krte hain aur content jitni space le kr items align hojaate hain
+
+Responsive Design in CSS (Kevin Powell)
+- by default things are responsive, agr sirf html code hai aur eik line css ki nhi hai tb bhi wo website responsive hogi, hn thori ajeeb dikhegi but hogi responsive
+- css mein values de kr ham khud responsive khatam krte hain, so by default responsive hoti hai 100% width ki waja se on all block level elements, so that's why while creating layout we should never use fixed width (like in pixels) for parent element.
+- and for child element also we should never use fixed width bcuz is se overflow issue aajata hai, content overflow hota hai
+
+- height kabhi nhi deni chahiye is a general suggestion
+- the web wants to be responsive with css, ham isko non responsive banaate hain
+- so ham height ki jaga padding use kr skte hain jis se layout responsive rehta hai
+
+-em unit font-size mein dia hai so apne parent se relate krta hai yaani parents mein agr kisi ka font size hai to usi ke according work krta hai, but agr kisi parent ka font size nhi hai so body ka 16px ke according work krta hai, its like compounding.
+- aur agr kisi aur css property mein em unit use kia to wo usi element ke font-size se relate krta hai
+-rems unit are always looking for root, so ye compounding ka issue solve krti hai aur html ke font-size se relate krta hai ye rem unit
+- so rem unit consistency ke liye use hota hai aksar
+- so for font size we should use rems, and em unit for margin (jo lock naa krni ho like margin-bottom) and padding, wrna margin ke liye bhi rem use kr skte hain if we want consistent margin
+
+- width ke saath ham use krte hain max-width for better desingn on big screen so is se text aur content poora stretch nhi hota from left to right, balke eik specific size pr ruk jaata hai
+- height ki tarah min-width bhi zaada use nhi krte bcuz is se bhi issues aa skte hain responsiveness mein, so jahan bht need ho wahi use krna chahiye
+
+flex items = apni width ko kam se kam rkhne ki koshish krte hain yaani content ke hisaab se hi, taakay eik row mein sb fit hojaayen, zaada se zaada 100% width bhi hoti hai if there is only one flex item
+- so ham flex items ko 100% de skte hain so that agr content kam bhi hojaye width kam naa ho
+- gap property for flexbox use nhi krni chahiye bcuz ye sirf firefox pr sahi chalti hai, so iski jaga ham + combinator selector ka use krte hain
+"+" combinator selector = adjacent sibling dekhta hai before element
+
+can i use website for checking css properties if they are running or not?
+
+- flexbox by default apne items ki height stretch krke rkhta hai
+- justify-content: space-between; ke liye zaroori hai ke ham items ki width kch naa kch kam rkhen jbhi property work karegi
+- img ko responsive banaane ke liye hamesha max-width: 100% use karen thats it
