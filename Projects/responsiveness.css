@@ -82,6 +82,12 @@ nav a {
   color: #fff;
 }
 
+.landing-page{
+  background-color: #555;
+  color: #fff;
+  padding: 3em 0;
+}
+
 #aside-main-grid {
   display: grid;
   grid-template-columns: 0.2fr 0.8fr;
