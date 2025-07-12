@@ -1,6 +1,7 @@
 Explore krne waalay topics:
 - floats and clear fix in CSS
 - tracks in CSS Grid
+- Resolving Conflicts in Git Deep Dive
 
 HTML: (Traversy Media)
 HTML = markup language for creating webpages / documents, building blocks of the web.
@@ -66,3 +67,38 @@ can i use website for checking css properties if they are running or not?
 - img ko responsive banaane ke liye hamesha max-width: 100% use karen thats it
 - grid is for structured layout, while flexbox is for intrint sizing
 - both can work same for us
+
+
+Git Deep Dive (Traversy Media)
+Topics:
+Git Version Control
+Subtopics:
+Commits
+Branches
+Merging
+Remote Repositories
+
+Git = eik distributed Version Control system (vcs) hai jo developers ki help krta hai unke codebase track krne mein, eik doosre ke sth collaborate krne mein aur project ke multiple versions manage krne mein. In simple words it is used to backup your code. It is decentralized (means you dont need a central server)
+Github = web based platform hai jo version control aur collaboration ke liye use hota hai. Repositories host krta hai aur eik interface provide krta hai code manage krne ke liye aur bhi bht kch krta hai
+
+branching = koi naya feature ya bug fixing pr kaam krne ke liye hamain allow krta hai without affecting main codebase, aur phr jb ham ready hon so apne kaam ko merge kr skte hain
+
+to completely delete .git file = rm -rf .git
+"U" and green color in vs code files shows = untracked (not added in staging area)
+"A" shows = added
+"M" shows = modified
+
+git log = command that shows commits starting from most recent
+and "q" to quit from it
+
+shortcut command to add and commit at a same time = git commit -am "commit msg"
+another thing you can do is = git add . && git commit -m "added task 7"
+
+Explore: what is SSH keys and difference b/w http and ssh while git clone
+
+create and switch to that branch = git checkout -b feature/login
+- feature/login and bugfix/responsiveness are naming conventions
+
+switch to branch = git checkout main
+delete branch locally = git branch -d feature/login
+to merge branch = git merge feature/login
