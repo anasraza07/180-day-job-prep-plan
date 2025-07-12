@@ -64,3 +64,5 @@ can i use website for checking css properties if they are running or not?
 - flexbox by default apne items ki height stretch krke rkhta hai
 - justify-content: space-between; ke liye zaroori hai ke ham items ki width kch naa kch kam rkhen jbhi property work karegi
 - img ko responsive banaane ke liye hamesha max-width: 100% use karen thats it
+- grid is for structured layout, while flexbox is for intrint sizing
+- both can work same for us

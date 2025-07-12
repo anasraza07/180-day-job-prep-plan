@@ -1,13 +1,13 @@
 * {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  color: #333;
-  line-height: 1.6em;
   margin: 0;
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  line-height: 1.6em;
 }
 
 h1,
@@ -19,13 +19,17 @@ h6 {
   line-height: normal;
 }
 
-a {
-  text-decoration: none;
-  color: #333;
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
 }
 
-p {
-  color: #ffffffee;
+h2, h3{
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {
@@ -34,8 +38,9 @@ ul {
 }
 
 .container {
-  max-width: 95%;
-  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .text-center {
@@ -45,6 +50,7 @@ ul {
 .button {
   display: inline-block;
   background-color: #ffffffee;
+  color: #333;
   padding: 8px 12px;
   font-weight: bold;
   margin-top: 20px;
@@ -55,11 +61,6 @@ ul {
   background-color: #ffffffdd;
 }
 
-header {
-  grid-area: header;
-  text-align: center;
-}
-
 nav {
   font-weight: bold;
   background-color: #555;
@@ -68,8 +69,11 @@ nav {
 
 nav ul {
   padding: 12px 0;
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
+  display: flex;
+}
+
+.nav-li + .nav-li {
+  margin-left: 20px;
 }
 
 nav a {
@@ -82,17 +86,15 @@ nav a {
   display: grid;
   grid-template-columns: 0.2fr 0.8fr;
   gap: 20px;
-  margin-block: 28px;
-  min-height: 400px;
+  margin: 28px auto 40px;
 }
 
 aside,
 main {
-  padding: 20px;
+  padding: 32px 20px;
   background-color: #555;
   color: #fff;
   border-radius: 8px;
-  /* margin: 20px 0; */
 }
 
 aside li {
@@ -108,7 +110,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0 32px;
 }
 
 article {
@@ -141,10 +143,9 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  nav ul {
-    grid-template-columns: repeat(4, auto);
+  html{
+    font-size: 14px;
   }
-
   section {
     grid-template-columns: 1fr;
     /* gap: 12px; */
