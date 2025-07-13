@@ -102,3 +102,22 @@ create and switch to that branch = git checkout -b feature/login
 switch to branch = git checkout main
 delete branch locally = git branch -d feature/login
 to merge branch = git merge feature/login
+
+vercel se ham github repo ke through cicd yaani continuous integration aur continuous deployment kr skte hain yaani code push krdo aur deploy krdo first time, ab jb bhi code push hoga website update hoti rahegi 
+
+Day07 - CSS Variables
+Topics:
+Custom Properties
+Dynamic Styling
+Inheritance
+
+css Variables DOM ka access rkhte hain so that javascript ke through ham change kr skte hain, media queries ke according change kr skte hain eik hi jaga, themes ke liye use kr skte hain
+:root eik pseudo class hai jo root element ko point krti hai basically our html element
+- overriding css Variables = ham ye bhi kr skte hain jese root mein Variables define krne ke baad usi Variable ki value kisi div ya seciton ke andr change kr skte hain jis se us section mein values alag apply hongi aur poore root yaani html mein alag values apply hongi, ye bhi bht useful hai
+local Variable = isi tarh se ye local Variables hote hain jo bilkul first time root mein nhi balke kisi tag mein ham likhte hain aur wo local Variable kahi aur work nhi karega except that tag
+- isi tarh ham css Variables ko themes ke liye use kr skte hain just like eik class dekr us class mein kch Variables set krliye aur phr wo specific section ya koi bhi element hai wo eik alag tarh dikhaayi deta hai
+Update Variables with javascript = ham change bhi kr skte hain like root element ko get krke us mien jo Variables hain uski values change krdi so ye sb website mein font size change krne ke liye ya themes pick krne ke liye use hota hai
+Variables with media queries = ham media query define krke bhi Variable ki value change kr skte hain
+Inheritance issues = Variables agr hamne declar kiye aur uski value bhi eik Variable hai to wohi save hojayega, ab aesa nhi hoga ke wo value waala Variable change krne pr ye current Variable bhi change hojaaye
+- isi tarh inheritance issues aate hain specially referencing mein ke css Variable ki value hi inherit krta hai naa ke value mein saved Variable.
+It means css Variables referencing nhi krta, only value save krleta hai

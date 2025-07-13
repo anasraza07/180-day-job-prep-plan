@@ -1,0 +1,102 @@
+/* Variable declarations */
+
+:root {
+  --red: #ff6f69;
+  --beige: #ffeead;
+  --yellow: #ffcc5c;
+  --main-color: var(var(--red))
+}
+
+.grid {
+  --columns: 1fr 1fr;
+}
+
+/* styles */
+
+body {
+  background-color: var(--beige);
+  color: var(--red);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--red);
+  /* color: var(--item-yellow); */
+  padding: 8px 12px;
+  font-weight: bold;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.navbar {
+  /* local variables: */
+  /* --nav-red: #ff6f19; */
+
+  /* inheritance issues: */
+  /* --red: orange; */ /* is property se anchor tag pr kch farq nhi parega */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link + .nav-link {
+  padding-left: 20px;
+}
+
+.navbar a {
+  color: var(--main-color);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns);
+  gap: 20px;
+}
+
+.item {
+  /* overriding variables */
+  /* --red: #ff8e69; */
+
+  /* local variables */
+  /* --item-yellow: #ffdb5c; */
+}
+
+.item {
+  background-color: var(--yellow);
+  color: var(--red);
+  padding: 40px;
+}
+
+/* themes */
+/* .featured {
+  --red: #ff8e19;
+  --item-yellow: #fffb5c;
+} */
+
+@media all and (max-width: 500px) {
+  :root {
+    --beige: lightblue;
+  }
+
+  .grid {
+    --columns: 1fr;
+  }
+}
