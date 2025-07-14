@@ -2,6 +2,8 @@ Explore krne waalay topics:
 - floats and clear fix in CSS
 - tracks in CSS Grid
 - Resolving Conflicts in Git Deep Dive
+- css animation tutorial 12 (after learning JS)
+- 
 
 HTML: (Traversy Media)
 HTML = markup language for creating webpages / documents, building blocks of the web.
@@ -121,3 +123,26 @@ Variables with media queries = ham media query define krke bhi Variable ki value
 Inheritance issues = Variables agr hamne declar kiye aur uski value bhi eik Variable hai to wohi save hojayega, ab aesa nhi hoga ke wo value waala Variable change krne pr ye current Variable bhi change hojaaye
 - isi tarh inheritance issues aate hain specially referencing mein ke css Variable ki value hi inherit krta hai naa ke value mein saved Variable.
 It means css Variables referencing nhi krta, only value save krleta hai
+
+Day08 - CSS Animations
+Topics:
+Keyframes
+Transitions
+Tranform
+Animation properties
+
+transform = web elements ko transform krta hai jese stretch, rotate, change their coordinates, skew krna ye sb ke liye transform property use hota hai
+translate = transform ki eik value hai jo move krti hai elements ko from one position to another
+scale = transform ki another value hai use to make elements bigger or smaller, 1 is default value
+rotate = transform ki value hai jo x aur y ke sth nhi balke z ke sth zaada sahi dikhti hai rotateZ zaada sahi lagta hai
+transition = property hai jo css properties ko transition krti hai taake web elements foran change naa hon eik slow-mo jesa look aaye
+transition property syntax = property-name duration delay timing-function
+Keyframes = iske through ham animations define krte hain different tareeqay se jese sbse simplest method hai from and to waala yaani from se to tk animate kro, yahan animation define krke phr element ko as a property animation name de dete hain
+animation-fill-mode = ye pop up se rokta hai jese animation end krne pr element again apni default value pr aaajata hai jo acha nhi lata isko set krne liye ye property use hoti hai with forwards value yaani animate ke baad ab wahi rahay, isi tarh agr animation ke from mein kch alag position hai so again pop up krta hai iske liye value backwards use krte hain, so in short ham both bhi use krte hain for better results
+repeating animations = ye ham krte hain using animation-iteration-count jisko bataate hain ham ke kitni baar animation run krni hai
+animation-direction = ye direction change krta hai jese reverse mein sirf animaiton reverse chalegi, alternate mein from se to aur to se from again and again animation chalegi, jbke alternate-reverse mein same hi hai sirf wo to se start hogi animation ye difference hai
+animation-timing-function = ye speed ke liye use krte hain ham, default value iski ease hoti yaani slow fast slow, ham different values de skte hain aur apna custom bhi define kr skte hain jese https://cubic-bezier.com website hai wahan jaakr 
+animaiton shorthand = is mien order matter nhi krta but sbse pehle jo number hai wo hamesha duration ka hoga aur iske baad waala delay ki value hogi
+- from aur to 2 states hain so jahan 2 states ke liye use krna ho wahan ye use hota hai wrna is se zaada changes ke liye percentages use krte hain
+animaiton chaining = yaani eik aur animaiton eik sth same element ko thora saa delay de kr de skte hain so isko animaiton chaining kehte hain
+transform-origin = is property se ham origin bhi define kr skte hain element ka ke kahan se turn hona hai ya rotate krna hai etc etc.
