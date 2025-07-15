@@ -1,0 +1,78 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  /* border: 2px solid dimgrey; */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+
+ul {
+  margin-bottom: 12px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+h1:hover {
+  color: blueviolet;
+  border: 2px solid salmon;
+}
+
+button:active {
+  font-size: 40px;
+}
+
+input:focus {
+  background-color: rgba(173, 216, 230, 0.527);
+}
+
+input:disabled {
+  background-color: aliceblue;
+  cursor: not-allowed;
+}
+
+/* li:first-child {
+  border: 2px solid slateblue;
+} */
+
+p:first-of-type {
+  border: 2px solid seagreen;
+}
+
+/* li:last-child {
+  border: 2px solid violet;
+} */
+
+p:last-of-type {
+  border: 2px solid rgb(128, 0, 0);
+}
+
+/* li:nth-child(3n) { // multiples of 3
+    border: 2px solid yellowgreen;
+} */
+
+li:nth-child(even) {
+  border: 2px solid saddlebrown;
+}
+
+li:nth-child(odd) {
+  border: 2px solid rosybrown;
+}
+
+p:nth-of-type(even) {
+  border: 2px solid blueviolet;
+}
+
+a:visited {
+  color: red;
+}
+
+

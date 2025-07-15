@@ -3,7 +3,7 @@ Explore krne waalay topics:
 - tracks in CSS Grid
 - Resolving Conflicts in Git Deep Dive
 - css animation tutorial 12 (after learning JS)
-- 
+- :target pseudo class in CSS
 
 HTML: (Traversy Media)
 HTML = markup language for creating webpages / documents, building blocks of the web.
@@ -146,3 +146,34 @@ animaiton shorthand = is mien order matter nhi krta but sbse pehle jo number hai
 - from aur to 2 states hain so jahan 2 states ke liye use krna ho wahan ye use hota hai wrna is se zaada changes ke liye percentages use krte hain
 animaiton chaining = yaani eik aur animaiton eik sth same element ko thora saa delay de kr de skte hain so isko animaiton chaining kehte hain
 transform-origin = is property se ham origin bhi define kr skte hain element ka ke kahan se turn hona hai ya rotate krna hai etc etc.
+
+Day09 - CSS Pseudo-classes 
+Topics:
+:hover,
+:focus,
+:nth-child
+styling interactions. 
+
+Pseudo-class = is used to define a special state of an element. jese 
+:disabled pseudo class = hamain allow krta hai disabled elements pr style lagaane ke liye
+:first-child = jo bhi element first ho apne siblings mein chaahe wo kahi bhi poori body pr wo select hojaata hai aur ham styles apply kr skte hain, isi tarh :last-child aur :nth-child work krte hain.
+:nth-child = :nth-child(2), :nth-child(2n), :nth-child(even), :nth-child(odd) ye sb ke sth kaam krta hai
+:first-of-type = means koi element jo first hai yaani first p ya first h1 poori body pr wo select krke usko styles apply kr skte hain
+pseudo-classes for links = eik to hai :link for unvisited, doosra hai :visited for visited links, teesra hai :hover for mouse over, fourth hai :active for click elements
+- Use :link to style links to unvisited pages, 
+:hover to style links when you mouse over them, and 
+:active to style links when you click on them.
+- To style links appropriately, put the :visited rule after the :link rule, but before the :hover and :active rules. So the order should be
+:link {}
+:visited {}
+:hover {}
+:active {}
+Allowed styles in visited pseudo-class:
+- color
+- background-color
+- border-color (and border-color for separate sides)
+- outline color
+- column-rule-color
+- text-decoration-color
+- text-emphasis-color   
+- SVG attributes fill and stroke
