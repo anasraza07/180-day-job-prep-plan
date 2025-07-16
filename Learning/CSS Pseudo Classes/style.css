@@ -59,7 +59,7 @@ p:last-of-type {
     border: 2px solid yellowgreen;
 } */
 
-li:nth-child(even) {
+/* li:nth-child(even) {
   border: 2px solid saddlebrown;
 }
 
@@ -69,10 +69,12 @@ li:nth-child(odd) {
 
 p:nth-of-type(even) {
   border: 2px solid blueviolet;
-}
+} */
 
 a:visited {
   color: red;
 }
 
-
+:not(h1){
+  border: 1px solid salmon;
+}

@@ -3,7 +3,7 @@ Explore krne waalay topics:
 - tracks in CSS Grid
 - Resolving Conflicts in Git Deep Dive
 - css animation tutorial 12 (after learning JS)
-- :target pseudo class in CSS
+- :target, :notlexbox pseudo class in CSS
 
 HTML: (Traversy Media)
 HTML = markup language for creating webpages / documents, building blocks of the web.
