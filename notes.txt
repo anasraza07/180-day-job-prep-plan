@@ -4,6 +4,7 @@ Explore krne waalay topics:
 - Resolving Conflicts in Git Deep Dive
 - css animation tutorial 12 (after learning JS)
 - :target, :notlexbox pseudo class in CSS
+- type of null is object why? is this wrong? and why it gives wrong value? in JS Basics
 
 HTML: (Traversy Media)
 HTML = markup language for creating webpages / documents, building blocks of the web.
@@ -177,3 +178,14 @@ Allowed styles in visited pseudo-class:
 - text-decoration-color
 - text-emphasis-color   
 - SVG attributes fill and stroke
+
+
+JavaScript Basics - Traversy Media
+- always use const unless you know you are going to reassign the value
+- const use krke ham Variable initialize bhi nhi kr skte, koi value assign krni parti hai
+let & const = have a block level scope 
+primitive data types = directly assigned to memory  
+null means basically empty
+mehtod = is a function that is associated with an object
+.split("") = method hai jo string ke hr character ko alag alag element banaa kr array return krta hai
+typescript = is a superset of javascript, its basically javascript with some added features like static typing
