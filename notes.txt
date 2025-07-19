@@ -5,6 +5,7 @@ Explore krne waalay topics:
 - css animation tutorial 12 (after learning JS)
 - :target, :notlexbox pseudo class in CSS
 - type of null is object why? is this wrong? and why it gives wrong value? in JS Basics
+- day 10, 11 & 12 coding section is left + day12 some topics of js is also left
 
 HTML: (Traversy Media)
 HTML = markup language for creating webpages / documents, building blocks of the web.
