@@ -190,3 +190,15 @@ null means basically empty
 mehtod = is a function that is associated with an object
 .split("") = method hai jo string ke hr character ko alag alag element banaa kr array return krta hai
 typescript = is a superset of javascript, its basically javascript with some added features like static typing
+.substring()
+
+
+Day 14 - JavaScript Functions 
+paramter = something that we pass to a function while declaring or defining the function.
+argument = the actual value we pass to the function while calling or invoking it.
+function with parenthesis = executing, calling, invoking the function
+function without parenthesis = is the string representation of the function definition itself
+rest paramter = allows a function to accept an infinite numbers of arguments as an array. Function definition can have only 1 rest paramter and the rest paramter must be the last paramter
+closure = the inner function means the nested function is clousre thats it, simple definition.
+
+

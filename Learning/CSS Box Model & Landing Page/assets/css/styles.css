@@ -30,6 +30,7 @@ body {
 
 ul {
   list-style: none;
+  padding: none;
 }
 
 a {
@@ -42,39 +43,10 @@ a:hover {
 }
 
 section {
-  margin: 2rem auto;
+  padding: 0 28px;
 }
 
-/* Dark theme starts*/
-.checkbox {
-  opacity: 0;
-  position: absolute;
-}
-
-.label {
-  width: 50px;
-  height: 30px;
-  background-color: #111;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 100px;
-  padding: 6px;
-  position: relative;
-}
-
-.switcher{
-  position: absolute;
-  top: 5px;
-  left: 2px;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: #fff;
-}
-/* Dark theme ends */
-
-/* Navbar starts */
+/* navbar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -101,6 +73,37 @@ nav {
   color: var(--secondary-color);
 }
 
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 50px;
+  height: 30px;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  padding: 6px;
+  position: relative;
+}
+
+.theme-switch {
+  display: none;
+}
+
+.switcher {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
 nav ul {
   display: flex;
 }
@@ -118,19 +121,24 @@ nav ul {
   display: none;
 }
 
-/* Dark theme */
-
-/* Dark theme ends */
-/* Navbar ends */
+.bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+  margin: 4px auto;
+}
 
 /* Hero section starts */
 .hero {
+  /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.8rem;
   max-width: 1100px;
   margin: 2rem auto;
+  min-height: calc(100vh - 96px);
 }
 
 .intro-text h1 {
@@ -181,6 +189,9 @@ nav ul {
 }
 
 iframe {
+  width: 500px;
+  height: 300px;
+  margin-top: 20px;
   border-top: 40px var(--primary-color) groove;
   border-bottom: 40px var(--primary-color) groove;
   border-left: 28px var(--secondary-color) groove;
@@ -224,22 +235,11 @@ iframe {
   min-height: calc(100vh - 96px);
   display: grid;
   place-content: center;
-  place-items: center;
+  text-align: center;
   gap: 1.5rem;
   position: relative;
   background: url("../images/jab-transformed.png") no-repeat top center/cover;
-  z-index: 1;
-}
-
-.about::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
-  z-index: -1;
+  /* z-index: 1; */
 }
 
 .about > * {
@@ -257,16 +257,24 @@ iframe {
 /* About section ends */
 
 /* Image gallery starts */
+.stars {
+  min-height: calc(100vh - 96px);
+  display: flex;
+  align-items: center;
+}
+
 .stars-gallery {
   display: flex;
   flex-wrap: wrap;
 }
+
 .stars-gallery a {
-  flex-basis: 25%;
-  flex: 1;
-  min-width: 300px;
   display: inline-block;
+  width: 23%;
+  min-width: 300px;
   height: 300px;
+  flex-grow: 1;
+  margin: 12px;
 }
 
 .stars-gallery img {
@@ -279,6 +287,12 @@ iframe {
 /* Image gallery ends */
 
 /* Stakeholders start */
+.stakeholders {
+  min-height: calc(100vh - 96px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .stakeholders .persons {
   display: flex;
@@ -300,27 +314,13 @@ iframe {
   font-size: 0.8rem;
 }
 
-/* Stakeholders ends */
-
-/* Scroll to top button starts */
-.scroll-up {
-  position: fixed;
-  right: 0.5%;
-  bottom: 0.5%;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.up-arrow {
-  width: 3rem;
-  height: 3rem;
-}
-
-/* Scroll to top button ends */
-
-/* Subscription form starts */
+/* Subscription form */
 .subscribe {
+  min-height: calc(100vh - 96px);
   text-align: center;
+  display: grid;
+  align-content: center;
+  gap: 20px;
 }
 
 .subscribe form {
@@ -358,7 +358,6 @@ iframe {
 
 /* Social icons */
 .social {
-  margin: 2rem;
   text-align: center;
 }
 
@@ -375,4 +374,55 @@ footer {
   box-shadow: 0px -2px 3px #f1f1f1;
 }
 
+/* Scroll to top button */
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 0.5%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
 /* Media Query */
+@media all and (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .stars {
+    padding: 3rem 0;
+  }
+
+  .stakeholders > div {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin-left: 12px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 12px;
+  }
+
+  iframe{
+    width: 400px;
+  }
+}
