@@ -200,5 +200,15 @@ function with parenthesis = executing, calling, invoking the function
 function without parenthesis = is the string representation of the function definition itself
 rest paramter = allows a function to accept an infinite numbers of arguments as an array. Function definition can have only 1 rest paramter and the rest paramter must be the last paramter
 closure = the inner function means the nested function is clousre thats it, simple definition.
-
-
+inner function = can access the outer function's argument or any Variable that is declared in outer function
+- wese to hr function jese hi execute hota hai to ab iske andr create kiye gaye Variables bhi khatam hojaate hain, lekin closure ye hai ke outer ke function ke andr banaaye gaye Variable ya iska argument jo hai wo khatam nhi hota even after executing outer function, so isko ham baad mein use kr skte hain ye save rehta hai aur yehi closure hai
+- Jab ek function execute hone ke baad bhi uske andar ka variable ya argument memory mein bacha rehta hai, aur usko inner function access kar sakta hai, to is concept ko closure kehte hain.
+- Yeh tab hota hai jab inner function outer function ke variables ko use karta hai — even after outer function finish ho jaaye.
+callback function = is the function that we can pass to any function and call this function based on any condition at a later point of time
+higher order funciton (HOF) = a regular funciton that 1. takes one or more funciton as an argument and or 2. returns a function as a value of it, so koi bhi condition meet krti hai wo funciton higher order funciton kehlaayega
+pure function = is the function that produces the same output for the same input
+impure funciton = opposite of pure function that means for the same input, it is not going to create same output, so it is depending on something which is called side effect.
+side effect = is nothing but the variable which is outside of the scope of a function and function cannot control this particular variable, anyone can change which can create a side effect
+IIFE (immediately invoked function expression) = a funciton expression where the code inside the function gets executed immediately after its been defined
+call stack = when a function gets executed there is a stack that javascript engine maintains and it works like first in last out, jese hi javascript interpreter ko funciton call dikhta hai kisi line pr so us function ko call stack ke andr store krta hai aur execute hone pr stack se nikaal deta hai, so in short call stack means function execution stack
+recursion = means a funciton refer or call itself, recursion use krte hue aapko make sure krna hai ke koi base condition hai jbhi recursion ka sahi use hoga aur sahi work karega. Base condition means under which condition you have to stop recursion 
