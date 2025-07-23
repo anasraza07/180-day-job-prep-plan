@@ -212,3 +212,21 @@ side effect = is nothing but the variable which is outside of the scope of a fun
 IIFE (immediately invoked function expression) = a funciton expression where the code inside the function gets executed immediately after its been defined
 call stack = when a function gets executed there is a stack that javascript engine maintains and it works like first in last out, jese hi javascript interpreter ko funciton call dikhta hai kisi line pr so us function ko call stack ke andr store krta hai aur execute hone pr stack se nikaal deta hai, so in short call stack means function execution stack
 recursion = means a funciton refer or call itself, recursion use krte hue aapko make sure krna hai ke koi base condition hai jbhi recursion ka sahi use hoga aur sahi work karega. Base condition means under which condition you have to stop recursion 
+
+
+Best array guide - freecodecamp = https://www.freecodecamp.org/news/javascript-array-tutorial-array-methods-in-js/
+
+DAY 17 - Javascript Array Methods: (freecodecamp news article)
+deep copy = 1st level data ke sth andar ke nested arrays ya objects bhi alag copy hote hain taakay agr copy mein koi change kro, original safe rahay
+shallow copy = sirf 1st level ka data copy hota hai, andar ke nested array ya objects hon to unka reference copy hota hai naa ke actual data
+spread operator = shallow copy krta hai
+JSON.parse(JSON.stringify(...)) = deep copy krta hai but with some limitations jese: Functions, undefined, symbols, aur Map, Set ko handle nahi karta, Unko skip ya string mein convert kar deta hai.
+includes() = agr hamein jaanna ho ke kia ye value array mein exist krti hai tb ham ye method ye use krte hain. Ye 2 parameters leta hai: value, startingIndex. startingIndex by default zero hota hai.
+indexOf() = agr aapko index pata krna ho kisi specific value ka, tb ye method use krte hain. Ye sirf first index return krta hai jese jb isko value mil jaaye tb wrna -1 return krta hai. Ye bhi 2 parameters leta hai: value aur startingIndex
+find() & findLast() = is se ham array mein first ya last element find kr skte hain jo hamari certain condition satisfy krta ho. Ye dono eik callback funciton lete hain jiske parameters hain: element, index aur array. Ye dono first ya last element return krte hain based on condition wrna undefined agr koi value match naa karay
+findIndex & findLastIndex = ye dono bhi same isi tarh kaam krte hain bs farq ye hai ke index return krte hain wrna -1
+every() & some() = jb array ke kisi element pr condition lagaa kr check krna ho tb ye methods use krte hain. Ye dono mehtods array pr iterate krte hain aur based on condition boolean value return krte hain jese every() ke liye hr element pr condition true honi chahiye, jakbe some() ke liye eik element pr bhi condition true hogai to true return krdega. Ye dono bhi 3 parameters lete hain: element, index, array.
+filter() = array elements ko filter krta hai based on certain condition. callback function leta hai jiske parameters hain: element, index aur array. array ki shallow copy banaata hai jis mein wohi elements hote hain jinke liye cb funciton truthy value return krta hai baaqi ko neglect krdeta hai 
+forEach() = kch return nhi krta isliye isko end of chain use krte hain
+sort() = array ko sort krta hai, by default kch unexpected outcomes aaskte hain isliye isko callback function pass krte hain so that sorting cb ki return value pr depend krti hai. callback funciton 2 parameters leta hai a and b jo 2 elements represent krta hai, agr return value: positive ho to b ke baad a aayega, negative ho to a ke baad b aayega, 0 ho to original order rahega same
+reduce() = ye methods eik callback leta hai jiske parameters hain: accumulator, element, index, array. har iteration ki return value next iteration ko pass hoti hai, second parameter of this methods is the starting value of accumulator, agar ye ham naa den to accumulator array ki 1st value le lega aur iteration second value yaani index 1 se start hogi
