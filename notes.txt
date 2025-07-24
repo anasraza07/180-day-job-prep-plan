@@ -230,3 +230,11 @@ filter() = array elements ko filter krta hai based on certain condition. callbac
 forEach() = kch return nhi krta isliye isko end of chain use krte hain
 sort() = array ko sort krta hai, by default kch unexpected outcomes aaskte hain isliye isko callback function pass krte hain so that sorting cb ki return value pr depend krti hai. callback funciton 2 parameters leta hai a and b jo 2 elements represent krta hai, agr return value: positive ho to b ke baad a aayega, negative ho to a ke baad b aayega, 0 ho to original order rahega same
 reduce() = ye methods eik callback leta hai jiske parameters hain: accumulator, element, index, array. har iteration ki return value next iteration ko pass hoti hai, second parameter of this methods is the starting value of accumulator, agar ye ham naa den to accumulator array ki 1st value le lega aur iteration second value yaani index 1 se start hogi
+
+DAY 18 - Javascript Localstorage
+localstorage = web browser ka eik feature hai jo allow krta hai developers ko ke user ke browser mein data save krlo. Ye web storage API ka part hai with session storage. key-value pairs mein data accept krta hai aur save rkhta hai even user page refresh karay ya browser ya tab band krde tb bhi
+session storage & difference = is mein jo data save hota hai wo tab/browser ke band hone se clear hojaata hai. Aur ye data speci browser tab ke liye hota hai jo share nhi hota jabke localstorage mein data multiple browser tabs aur windows mein accessible hota hai 
+delete data from localstorage = iske 2 methods hain eik hai: removeItem(key) jo key leta hai aur us key value pair ko delete krta hai, aur doosra hai: clear() jo saara data clear krdeta hai 
+localstorage.key(0) = ye method key ka name get krne ke liye use krte hain jo index leta hai aur us index pr key ka naam bataata hai, agr koi key naa ho us index pr to null return krta hai
+- cookies 5kb per domain data le skta hai jbke localstorage 5mb per domain data store kr skta hai
+localstorage guide = https://www.freecodecamp.org/news/use-local-storage-in-modern-applications/
