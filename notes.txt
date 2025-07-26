@@ -238,3 +238,21 @@ delete data from localstorage = iske 2 methods hain eik hai: removeItem(key) jo 
 localstorage.key(0) = ye method key ka name get krne ke liye use krte hain jo index leta hai aur us index pr key ka naam bataata hai, agr koi key naa ho us index pr to null return krta hai
 - cookies 5kb per domain data le skta hai jbke localstorage 5mb per domain data store kr skta hai
 localstorage guide = https://www.freecodecamp.org/news/use-local-storage-in-modern-applications/
+
+Day 19 - JavaScript DOM
+DOM (document object model) = basically a structured representation of an html document. kind of tree of nodes or elements created by the browser. DOM is object oriented meaning that each node has its own properties and methods
+HTML collection array jesa dikhta hai but is mien aur array mein ye difference hai ke html collection ke sth ham array ka har method use nhi kr skte iske liye hamein collection ko array banaana prta hai pehle
+innerText aur textContent difference = ye dono hi text ko change krne ke liye use hote hain, difference ye hai ke innerText zaadaa attention deta hai styles pr jese agr kisis element ko display: none; property di to innerText mein bhi wo show nhi hoga lekin textContent mein show hota hai even page se hide hojaata hai tb bhi 
+querySelector = is mein aap koi bhi css selector use krke element select kr skte hain
+nodelist = querySelectorAll ye return krta hai hamain, jis pr ham easily array methods run kr skte hain unlike html collection
+text node = represent white spaces like line break that's why instead of using childNodes, use children and instead of using firstChild, use firstElementChild
+- isi tarh lastChild aur lastElementChild method hai, nextSibling aur nextElementSibling method hai, previousSibling aur previousElementSibling hai jo eik text node deta hai aur eik sahi kaam krta hai
+className = kisi bhi element ki classes get krne ke liy yehi use krte hain 
+e.type = bataata hai konsa event hai ye jo abhi trigger hua
+e.clientX & e.clientY = ye mouse ki pisition bataate hain window se
+e.offsetX & e.offsetY = ye mouse ki position usi element se bataata hai jis pr event trigger hua hai
+event.ctrlKey, event.shiftKey & event.altKey = ye boolean value return krte hain like in keys hold krke agr koi event trigger hua to ye methods true return karengay wrna false 
+mouseenter = event hai jo sirf element pr hi trigger hota hai
+mouseover = event hai jo inner elements pr bhi trigger hojaata hai yehi difference baaqi dono eik jese hain
+mouseleave = element ke baahar jaane pr trigger hota hai
+mouseout = element ke baahar jaane pr aur inner element se baahar jaane pr bhi trigger hota hai
