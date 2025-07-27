@@ -256,3 +256,8 @@ mouseenter = event hai jo sirf element pr hi trigger hota hai
 mouseover = event hai jo inner elements pr bhi trigger hojaata hai yehi difference baaqi dono eik jese hain
 mouseleave = element ke baahar jaane pr trigger hota hai
 mouseout = element ke baahar jaane pr aur inner element se baahar jaane pr bhi trigger hota hai
+- keypress event is deprecated thats why always use keydown event
+keydown event = tab trigger hota hai jab key press hoti hai, lekin us waqt character input field mein add nahi hua hota. Isliye e.target.value purani value return karta hai (jo input ke andar tha key press hone se pehle).
+keypress = Jab printable character key press hoti hai. No value updated
+keyup = Jab key chhodi jaati hai (key release hoti hai), updated value milti hai
+input = Jab input value change hoti hai (real-time typing), yehi best hai updated value milti hai
