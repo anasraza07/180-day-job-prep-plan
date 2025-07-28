@@ -216,7 +216,7 @@ recursion = means a funciton refer or call itself, recursion use krte hue aapko 
 
 Best array guide - freecodecamp = https://www.freecodecamp.org/news/javascript-array-tutorial-array-methods-in-js/
 
-DAY 17 - Javascript Array Methods: (freecodecamp news article)
+Day 17 - Javascript Array Methods: (freecodecamp news article)
 deep copy = 1st level data ke sth andar ke nested arrays ya objects bhi alag copy hote hain taakay agr copy mein koi change kro, original safe rahay
 shallow copy = sirf 1st level ka data copy hota hai, andar ke nested array ya objects hon to unka reference copy hota hai naa ke actual data
 spread operator = shallow copy krta hai
@@ -231,7 +231,7 @@ forEach() = kch return nhi krta isliye isko end of chain use krte hain
 sort() = array ko sort krta hai, by default kch unexpected outcomes aaskte hain isliye isko callback function pass krte hain so that sorting cb ki return value pr depend krti hai. callback funciton 2 parameters leta hai a and b jo 2 elements represent krta hai, agr return value: positive ho to b ke baad a aayega, negative ho to a ke baad b aayega, 0 ho to original order rahega same
 reduce() = ye methods eik callback leta hai jiske parameters hain: accumulator, element, index, array. har iteration ki return value next iteration ko pass hoti hai, second parameter of this methods is the starting value of accumulator, agar ye ham naa den to accumulator array ki 1st value le lega aur iteration second value yaani index 1 se start hogi
 
-DAY 18 - Javascript Localstorage
+Day 18 - Javascript Localstorage
 localstorage = web browser ka eik feature hai jo allow krta hai developers ko ke user ke browser mein data save krlo. Ye web storage API ka part hai with session storage. key-value pairs mein data accept krta hai aur save rkhta hai even user page refresh karay ya browser ya tab band krde tb bhi
 session storage & difference = is mein jo data save hota hai wo tab/browser ke band hone se clear hojaata hai. Aur ye data speci browser tab ke liye hota hai jo share nhi hota jabke localstorage mein data multiple browser tabs aur windows mein accessible hota hai 
 delete data from localstorage = iske 2 methods hain eik hai: removeItem(key) jo key leta hai aur us key value pair ko delete krta hai, aur doosra hai: clear() jo saara data clear krdeta hai 
@@ -258,6 +258,17 @@ mouseleave = element ke baahar jaane pr trigger hota hai
 mouseout = element ke baahar jaane pr aur inner element se baahar jaane pr bhi trigger hota hai
 - keypress event is deprecated thats why always use keydown event
 keydown event = tab trigger hota hai jab key press hoti hai, lekin us waqt character input field mein add nahi hua hota. Isliye e.target.value purani value return karta hai (jo input ke andar tha key press hone se pehle).
-keypress = Jab printable character key press hoti hai. No value updated
-keyup = Jab key chhodi jaati hai (key release hoti hai), updated value milti hai
-input = Jab input value change hoti hai (real-time typing), yehi best hai updated value milti hai
+keypress event = Jab printable character key press hoti hai. No value updated
+keyup event = Jab key chhodi jaati hai (key release hoti hai), updated value milti hai
+input event = Jab input value change hoti hai (real-time typing), yehi best hai updated value milti hai
+
+Day 20 - JavaScript Events (apna college)
+event = the change in the state of an object
+event handling = event generate hone ke baad kch kaam krwaana
+inline event handling = html mein hi hoti hai onclick ya on<eventName> ka use krke, which is not recommended
+event handling in js = btn.onclick = function(){ // handle here }
+- agr inline aur js dono mein event handle kia hai to priority js ko hoti hai, inline ko nhi.
+event object = eik special object jo event ki details deta hai
+event listeners = iske through ham same events pr multiple kaam kr waa skte hain, isi liye yehi recommended hai aur yehi use karengay
+- the callback reference should be same to remove event listener 
+toggling or toggle button = means 2 state ke beech switch krte rehna
