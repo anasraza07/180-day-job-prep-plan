@@ -272,3 +272,21 @@ event object = eik special object jo event ki details deta hai
 event listeners = iske through ham same events pr multiple kaam kr waa skte hain, isi liye yehi recommended hai aur yehi use karengay
 - the callback reference should be same to remove event listener 
 toggling or toggle button = means 2 state ke beech switch krte rehna
+
+Day 21 - JavaScript ES6 Refactor (Net Ninja)
+ecmascript = is a standard for scripting languages, ES5 is current version implemented into most browsers
+ES6 = is the latest standardized version of ES, includes many new features but not fully supported in browsers yet
+- isiliye kisi live project ke liye aapko transpiler use krna parega like babel or something jo es6 ko es5 mein transpile krta hai 
+var and let difference in for loop = var use krne se 1 hi variable har baar overwrite hota hai → loop ke andr sab functions usi variable ko refer karte hain, jabke let har baar naya variable banata hai → loop ke andr har function apna alag variable capture karta hai 
+var = function scoped, same variable used in all iterations, Sab closures ek hi variable dikhate hain
+let = block scoped (new block per loop), new variable created in each iteration, har closure apna variable dikhaata hai
+new string methods in es6 = repeat, startsWith, endsWith, includes
+- arrow funciton this ki value bind krdeta hai 
+Set = eik naya data structure hai jo ham use krte hain to store unique values of whatever type we want so it means Set eliminate duplicate values, iske apne methods hote hain jo ham use kr skte hain
+add(value) = sets ka method hai jo add krne ke baad upated set return krta hai   
+delete(value) = set ka eik method hai jo values delete krta hai aur boolean value return krta hai based on deletion, if succeed so it returns true otherwise false. Is mein ham chaining nhi kr skte like add method
+clear() = method of set that clear all its elements
+has() = array ke includes ki tarh work krta hai aur boolean return krta hai based on value found or not.
+Generators = are basically just functions which we can play and pause whenever we want so that we can have ultimate control over the flow of them, ye work is tarh krta hai ke function keyword ke aagay steric (*) lagaado aur phr ab jb function call hoga so code foran run nhi hoga balke function set krta hai generator aur eik iterator return krdeta hai   
+iterator in generator = jiske through ham iterate krte hain between of cycle of things by using next method play button ki tarh kaam krta hai, isi tarh ham pause bhi krte hain by using yield keyword in our function anywhere we want, aur JS right to left run krti hai so run krte hue jahan yield keyword aaya wahi code pause hojayega aur next ko dhundega agr nhi hai to pause rahega 
+yield keyword = ye help krta hai iterator ko value pass krne mein jese generator function mein yeild ke baad agr koi value pass karen to wo hamein iterator mein return milti hai when we call next method, poora eik object milta hai with value and done property aur ye done property jb tk true nhi hota jb tk generator function end naa hojaaye, isi tarh ham iterator se generator yaani jahan yeild keyword hai wahan value pass kr skte hain using next method aur phr wo value yeild return karega
