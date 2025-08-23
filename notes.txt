@@ -7,7 +7,7 @@ Explore krne waalay topics:
 - type of null is object why? is this wrong? and why it gives wrong value? in JS Basics
 - day 10, 11 & 12 coding section is left + day12 some topics of js is also left
 
-HTML: (Traversy Media)
+Day 01 - HTML Basics: (Traversy Media)
 HTML = markup language for creating webpages / documents, building blocks of the web.
 index.html = root / home page of a website
 ctrl + u => shortcut to see tha source code
@@ -24,10 +24,10 @@ input name attribute = ye bhi server side programming mein use hota hai like jo 
 Semantic tags = clearly describe its meaning to both the browser and the developer, they are: <header>, <footer>, <aside>, <main>, <article>, <nav>, <section> and <details>.
 <small> tag is usually used for create dates like sub content
 
-CSS BASICS: (Traversy Media)
+Day 02 - CSS BASICS (Traversy Media)
 CSS = used for website layout and design, can be extended with Sass/Less
 
-CSS FLEXBOX: (Net Ninja)
+Day 03 - CSS FLEXBOX (Net Ninja)
 flex-grow = we use it to expand elements into available space by giving each flex item a growth rate
 flex-shrink = we use it to shrink elements as the browser gets smaller by giving each flex item a shirnk rate
 - by default, flex items shrink in proportion to one another at same rate
@@ -36,12 +36,12 @@ flex-basis = minimum width ki tarh kaam krta hai aur same tarh behave krta hai, 
 flex-flow = shorthand for flex-direction and flex-flow
 order = default value 0 hoti hai aur agr 0 value khud se di to source code ke according items order hongay, jitni lowest value wo item pehle aayega aur highest order waala item last mein aayega
 
-CSS Grid (Net Ninja)
+Day 04 - CSS Grid (Net Ninja)
 grid rows = automatically create hoti hain when we have content aur column fix hote hain so phr nayi row mein content shift hojaata hai
 grid-auto-rows = container ki property hai jiska use krke ham tamam grid items ki height set krte hain, is mein minmax bhi use kr skte hain
 align-items & justify-content = container property hai jo saaray items ki alignment ke liye use krte hain aur content jitni space le kr items align hojaate hain
 
-Responsive Design in CSS (Kevin Powell)
+Day 05 - Responsive Design in CSS (Kevin Powell)
 - by default things are responsive, agr sirf html code hai aur eik line css ki nhi hai tb bhi wo website responsive hogi, hn thori ajeeb dikhegi but hogi responsive
 - css mein values de kr ham khud responsive khatam krte hain, so by default responsive hoti hai 100% width ki waja se on all block level elements, so that's why while creating layout we should never use fixed width (like in pixels) for parent element.
 - and for child element also we should never use fixed width bcuz is se overflow issue aajata hai, content overflow hota hai
@@ -126,7 +126,7 @@ Inheritance issues = Variables agr hamne declar kiye aur uski value bhi eik Vari
 - isi tarh inheritance issues aate hain specially referencing mein ke css Variable ki value hi inherit krta hai naa ke value mein saved Variable.
 It means css Variables referencing nhi krta, only value save krleta hai
 
-Day08 - CSS Animations
+Day 08 - CSS Animations
 Topics:
 Keyframes
 Transitions
@@ -149,7 +149,7 @@ animaiton shorthand = is mien order matter nhi krta but sbse pehle jo number hai
 animaiton chaining = yaani eik aur animaiton eik sth same element ko thora saa delay de kr de skte hain so isko animaiton chaining kehte hain
 transform-origin = is property se ham origin bhi define kr skte hain element ka ke kahan se turn hona hai ya rotate krna hai etc etc.
 
-Day09 - CSS Pseudo-classes 
+Day 09 - CSS Pseudo-classes 
 Topics:
 :hover,
 :focus,
@@ -178,8 +178,13 @@ Allowed styles in visited pseudo-class:
 - column-rule-color
 - text-decoration-color
 - text-emphasis-color   
-- SVG attributes fill and stroke
+- SVG attributes fill and 
 
+Day 10 - CSS Box Model & Landing Page
+
+Day 11 - Responsive Images & Review
+pexels = site for best images
+smartmockups = for mockups
 
 JavaScript Basics - Traversy Media
 - always use const unless you know you are going to reassign the value
@@ -191,7 +196,6 @@ mehtod = is a function that is associated with an object
 .split("") = method hai jo string ke hr character ko alag alag element banaa kr array return krta hai
 typescript = is a superset of javascript, its basically javascript with some added features like static typing
 .substring()
-
 
 Day 14 - JavaScript Functions 
 paramter = something that we pass to a function while declaring or defining the function.
@@ -211,8 +215,7 @@ impure funciton = opposite of pure function that means for the same input, it is
 side effect = is nothing but the variable which is outside of the scope of a function and function cannot control this particular variable, anyone can change which can create a side effect
 IIFE (immediately invoked function expression) = a funciton expression where the code inside the function gets executed immediately after its been defined
 call stack = when a function gets executed there is a stack that javascript engine maintains and it works like first in last out, jese hi javascript interpreter ko funciton call dikhta hai kisi line pr so us function ko call stack ke andr store krta hai aur execute hone pr stack se nikaal deta hai, so in short call stack means function execution stack
-recursion = means a funciton refer or call itself, recursion use krte hue aapko make sure krna hai ke koi base condition hai jbhi recursion ka sahi use hoga aur sahi work karega. Base condition means under which condition you have to stop recursion 
-
+recursion = means a funciton refer or call itself, recursion use krte hue aapko make sure krna hai ke koi base condition hai jbhi recursion ka sahi use hoga aur sahi work karega. Base condition means under which condition you have to stop recursion
 
 Best array guide - freecodecamp = https://www.freecodecamp.org/news/javascript-array-tutorial-array-methods-in-js/
 
@@ -290,3 +293,13 @@ has() = array ke includes ki tarh work krta hai aur boolean return krta hai base
 Generators = are basically just functions which we can play and pause whenever we want so that we can have ultimate control over the flow of them, ye work is tarh krta hai ke function keyword ke aagay steric (*) lagaado aur phr ab jb function call hoga so code foran run nhi hoga balke function set krta hai generator aur eik iterator return krdeta hai   
 iterator in generator = jiske through ham iterate krte hain between of cycle of things by using next method play button ki tarh kaam krta hai, isi tarh ham pause bhi krte hain by using yield keyword in our function anywhere we want, aur JS right to left run krti hai so run krte hue jahan yield keyword aaya wahi code pause hojayega aur next ko dhundega agr nhi hai to pause rahega 
 yield keyword = ye help krta hai iterator ko value pass krne mein jese generator function mein yeild ke baad agr koi value pass karen to wo hamein iterator mein return milti hai when we call next method, poora eik object milta hai with value and done property aur ye done property jb tk true nhi hota jb tk generator function end naa hojaaye, isi tarh ham iterator se generator yaani jahan yeild keyword hai wahan value pass kr skte hain using next method aur phr wo value yeild return karega
+
+Day 22 - Javascript Modules
+Import/export, ES modules, module patterns.
+module in javascript = is just a file containing related code
+export keyword = is used to make a variable, function, class or object accessible to other modules. In other words, it becomes a public code.
+import keyword = is used to bring in public code from another module.
+- If you're importing everything from a module, you should use the asterisk (*) instead of explicitly spelling out all the functions one-by-one.
+'as' keyword = We use this to import the public functions into a new object, which in our case is the 'mainfunctions' object. We then access and call the functions we want to use in our program
+Default Exports = when you are most likely to use that single function, you simply use the default keyword. you don't have to import the function into curly braces
+- If you want to import the default function along with any other functions, you mix the bare 'default' function with other functions in curly braces

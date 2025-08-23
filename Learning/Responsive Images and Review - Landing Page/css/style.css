@@ -141,7 +141,7 @@ nav a#openup {
   overflow-y: hidden;
   margin: 0;
   padding: 0;
-  background: url("../img/showcase.jpg") no-repeat center/cover;
+  background: url("../img/showcase.jpg") no-repeat bottom/cover;
   min-height: 100vh;
   position: relative;
 }
