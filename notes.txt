@@ -303,3 +303,14 @@ import keyword = is used to bring in public code from another module.
 'as' keyword = We use this to import the public functions into a new object, which in our case is the 'mainfunctions' object. We then access and call the functions we want to use in our program
 Default Exports = when you are most likely to use that single function, you simply use the default keyword. you don't have to import the function into curly braces
 - If you want to import the default function along with any other functions, you mix the bare 'default' function with other functions in curly braces
+
+Day 23 - Javascript Error Handling
+error handling = is used most when working with data from other sources or user input, it uses the keywords like try, catch, finally and throw
+try statement = lets you test a block of code for errors 
+catch statement = lets you handle the error 
+throw statement = lets you create custom errors 
+finally statement = lets you execute code after try and catch regardless of the result 
+- code mein error milte hi program ruk jaata hai aur direct catch statement mein chala jaata hai
+- jb error aata hai to JS eik obj banaaleta hai with error details jo catch ke parameter mein accessible hota hai hamein, is obj ki 2 properties bhi hoti hain name aur message; name => yaani referenceError aur message => wohi error msg
+- try catch sahi kaam karay iske liye zaroori hai code runnable ho yaani valid javascript ho koi wrong syntax naa ho
+- try catch does not handle parse time errors, it only handles runtime errors
