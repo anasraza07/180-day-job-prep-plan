@@ -348,3 +348,22 @@ shortcuts for understanding:
 -  \s doesn't match the beginning or end of the text.
 - ^ anchor = This asserts that your pattern match starts at the beginning of the full string
 -  you can use the $ anchor to match the end of the string.
+- link = https://regex101.com/
+
+Day 25 - JavaScript CRUD Project
+- Combine everything you’ve learned so far (DOM, events, arrays, localStorage) to build a real CRUD app.
+💻 Coding Task – Note‑Taking App
+Build a small, single‑page app that lets users:
+- Feature Requirement:
+Create => Add a note with title & body
+Read => Display all saved notes on page load
+Update => Click “Edit” → update content → save
+Delete => Remove any note
+Persist => Save & load notes with localStorage
+- Use addEventListener for buttons
+- Use querySelector / innerHTML for rendering
+- Keep code modular (functions)
+🐞 Debug & Polish
+Test create / update / delete after page refresh
+Handle empty input (show alert)
+No duplicate IDs
