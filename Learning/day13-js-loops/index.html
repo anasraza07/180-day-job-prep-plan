@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 - Javascript Loops</title>
+</head>
+
+<body>
+
+    <script>
+        // While loop //
+        let age = 5;
+        while (age < 10) {
+            // console.log("Your age is less than 10")
+            age++;
+        }
+
+        // document.write("You are now over 10")
+
+        // For loop //
+        for (i = 1; i <= 5; i++) {
+            // console.log("loop " + i)
+        }
+
+        for (i = 0; i < 10; i++) {
+            
+            if (i == 3 || i == 5) {
+                continue;
+            }
+            
+            console.log(i);
+            
+            if (i == 7) {
+                break;
+            }
+        }
+        console.log("I have broken out of the loop")
+
+
+    </script>
+</body>
+
+</html>

@@ -4,22 +4,22 @@ Explore krne waalay topics:
 - Resolving Conflicts in Git Deep Dive
 - css animation tutorial 12 (after learning JS)
 - :target, :notlexbox pseudo class in CSS
-- type of null is object why? is this wrong? and why it gives wrong value? in JS Basics
+- video left from oop in JS Basics
 - day 10, 11 & 12 coding section is left + day12 some topics of js is also left
 
 Day 01 - HTML Basics: (Traversy Media)
-HTML = markup language for creating webpages / documents, building blocks of the web.
-index.html = root / home page of a website
-ctrl + u => shortcut to see tha source code
+- HTML = markup language for creating webpages / documents, building blocks of the web.
+- index.html = root / home page of a website
+- ctrl + u => shortcut to see tha source code
 - chrome tools are really helpful
-Block level elements = div, h1-h6, p, form
-Inline level elements = span, img, a, input, label
-<strong>, <em> tags are semantic tags used to bold or emphasize the text
-Tag attributes = provide information about an element
+- Block level elements = div, h1-h6, p, form
+- Inline level elements = span, img, a, input, label
+- <strong>, <em> tags are semantic tags used to bold or emphasize the text
+- Tag attributes = provide information about an element
 - <ul> tag has padding-left of 40px by default
-Unordered list = usually used for website navigation like at navbar
-Tables = pehle use hote thay 1999s mein for website layout but ab ye recommended nhi hain, ab sirf kisi tabular data ke liye use kiye jaate hain html mein
-Form mein jo attributes hain like action aur method, action mein koi file ya server ka address dete hain jahan form data recieve hote hai aur method mein "POST" ya "GET" dete hain yaani POST for safe data and GET for searching data bcuz it is not safe, data url mein nazar aata hai
+- Unordered list = usually used for website navigation like at navbar
+- Tables = pehle use hote thay 1999s mein for website layout but ab ye recommended nhi hain, ab sirf kisi tabular data ke liye use kiye jaate hain html mein
+- Form mein jo attributes hain like action aur method, action mein koi file ya server ka address dete hain jahan form data recieve hote hai aur method mein "POST" ya "GET" dete hain yaani POST for safe data and GET for searching data bcuz it is not safe, data url mein nazar aata hai
 input name attribute = ye bhi server side programming mein use hota hai like jo data server pr jaayega wo usi naam se jaayega jo is name attribute mein dengay ham
 Semantic tags = clearly describe its meaning to both the browser and the developer, they are: <header>, <footer>, <aside>, <main>, <article>, <nav>, <section> and <details>.
 <small> tag is usually used for create dates like sub content
@@ -186,36 +186,50 @@ Day 11 - Responsive Images & Review
 pexels = site for best images
 smartmockups = for mockups
 
-JavaScript Basics - Traversy Media
+Day 12 - JavaScript Basics (Traversy Media)
+Topics: variable, data types, conditionals, console.log
 - always use const unless you know you are going to reassign the value
 - const use krke ham Variable initialize bhi nhi kr skte, koi value assign krni parti hai
-let & const = have a block level scope 
-primitive data types = directly assigned to memory  
-null means basically empty
-mehtod = is a function that is associated with an object
-.split("") = method hai jo string ke hr character ko alag alag element banaa kr array return krta hai
-typescript = is a superset of javascript, its basically javascript with some added features like static typing
-.substring()
+- let & const = have a block level scope 
+- primitive data types = directly assigned to memory  
+- null means basically empty
+- type of null is object why? is this wrong? and why it gives wrong value? = starting mein jab JavaScript pehli baar bana tha, toh usmein values ko ek khaas tarah se store kiya jaata tha, jise "type tag" kehte hain. object ka type tag 000 tha. Null ko us waqt ek "null pointer" ke taur par represent kiya gaya tha, jiska value bhi 000 hi hota tha. Is wajah se, jab typeof operator null ko check karta tha, toh usko lagta tha ke yeh bhi ek object hai, kyuki dono ka type tag same tha. 
+- Ab isko theek kyun nahi karte? = JavaScript ab duniya mein har jagah istemaal hota hai. Agar is ghalti ko ab theek kar diya jaaye, toh bohot saari purani websites aur applications kaam karna band kar dengi. Is problem ko "backward compatibility" ke liye waisa hi chhor diya gaya hai, taake purana code ab bhi sahi kaam kare. Is masle se bachne ke liye, typeof ki jagah hamesha === ka istemaal karen.
+- value === null ka matlab hai ke value aur null dono bilkul barabar hain, baghair kisi ghalti ke.
+- typeof value === 'object' istemaal karna tab sahi hai jab aap ko maloom ho ke value null nahi ho sakti. 
+- mehtod = is a function that is associated with an object
+- .split("") = method hai jo string ke hr character ko alag alag element banaa kr array return krta hai if empty string, wrna iske apne hisaab se split kr skte hain based on jo bhi quotation ke andr ho
+- typescript = is a superset of javascript, its basically javascript with some added features like static typing (variables ka type bhi define krna prta hai)
+- .substring(0, 5) = string ke 0 index se start karega aur 5 se pehle stop krke characters return krdega    
+- Array.isArray(arrName) = check krne ke liye ke ye chz array hai ya nhi, aur phr return mein boolean value milti hai
+- .indexOf(element) = kisi element ka index check krna ho tb use krte hain ye method
+- JSON = is a data format used a lot in fullstack development when 
+sending data to the server or recieving from server usally in json format and it is very similar to object literals 
+
+Day 13 - JavaScript Loops
+Topics: for, while, forEach, loop control (break, continue) 
+- break keyword = we can use it to break out of the loop at any point
+- continue keyword = we use it to just skip out the code for that iteration
 
 Day 14 - JavaScript Functions 
-paramter = something that we pass to a function while declaring or defining the function.
-argument = the actual value we pass to the function while calling or invoking it.
-function with parenthesis = executing, calling, invoking the function
-function without parenthesis = is the string representation of the function definition itself
-rest paramter = allows a function to accept an infinite numbers of arguments as an array. Function definition can have only 1 rest paramter and the rest paramter must be the last paramter
-closure = the inner function means the nested function is clousre thats it, simple definition.
-inner function = can access the outer function's argument or any Variable that is declared in outer function
+- paramter = something that we pass to a function while declaring or defining the function.
+- argument = the actual value we pass to the function while calling or invoking it.
+- function with parenthesis = executing, calling, invoking the function
+- function without parenthesis = is the string representation of the function definition itself
+- rest paramter = allows a function to accept an infinite numbers of arguments as an array. Function definition can have only 1 rest paramter and the rest paramter must be the last paramter
+- closure = the inner function, means the nested function is clousre thats it, simple definition.
+- inner function = can access the outer function's argument or any Variable that is declared in outer function
 - wese to hr function jese hi execute hota hai to ab iske andr create kiye gaye Variables bhi khatam hojaate hain, lekin closure ye hai ke outer ke function ke andr banaaye gaye Variable ya iska argument jo hai wo khatam nhi hota even after executing outer function, so isko ham baad mein use kr skte hain ye save rehta hai aur yehi closure hai
 - Jab ek function execute hone ke baad bhi uske andar ka variable ya argument memory mein bacha rehta hai, aur usko inner function access kar sakta hai, to is concept ko closure kehte hain.
 - Yeh tab hota hai jab inner function outer function ke variables ko use karta hai — even after outer function finish ho jaaye.
-callback function = is the function that we can pass to any function and call this function based on any condition at a later point of time
-higher order funciton (HOF) = a regular funciton that 1. takes one or more funciton as an argument and or 2. returns a function as a value of it, so koi bhi condition meet krti hai wo funciton higher order funciton kehlaayega
-pure function = is the function that produces the same output for the same input
-impure funciton = opposite of pure function that means for the same input, it is not going to create same output, so it is depending on something which is called side effect.
-side effect = is nothing but the variable which is outside of the scope of a function and function cannot control this particular variable, anyone can change which can create a side effect
-IIFE (immediately invoked function expression) = a funciton expression where the code inside the function gets executed immediately after its been defined
-call stack = when a function gets executed there is a stack that javascript engine maintains and it works like first in last out, jese hi javascript interpreter ko funciton call dikhta hai kisi line pr so us function ko call stack ke andr store krta hai aur execute hone pr stack se nikaal deta hai, so in short call stack means function execution stack
-recursion = means a funciton refer or call itself, recursion use krte hue aapko make sure krna hai ke koi base condition hai jbhi recursion ka sahi use hoga aur sahi work karega. Base condition means under which condition you have to stop recursion
+- callback function = is the function that we can pass to any function and call this function based on any condition at a later point of time
+- higher order funciton (HOF) = a regular funciton that 1. takes one or more funciton as an argument and/or 2. returns a function as a value of it, so koi bhi condition meet krti hai wo funciton higher order funciton kehlaayega
+- pure function = is the function that produces the same output for the same input
+- impure funciton = opposite of pure function that means for the same input, it is not going to create same output, so it is depending on something which is called side effect.
+- side effect = is nothing but the variable which is outside of the scope of a function and function cannot control this particular variable, anyone can change which can create a side effect
+- IIFE (immediately invoked function expression) = a funciton expression where the code inside the function gets executed immediately after its been defined
+- call stack = when a function gets executed there is a stack that javascript engine maintains and it works like first in last out, jese hi javascript interpreter ko funciton call dikhta hai kisi line pr so us function ko call stack ke andr store krta hai aur execute hone pr stack se nikaal deta hai, so in short call stack means function execution stack
+- recursion = means a funciton refer or call itself, recursion use krte hue aapko make sure krna hai ke koi base condition hai jbhi recursion ka sahi use hoga aur sahi work karega. Base condition means under which condition you have to stop recursion
 
 Best array guide - freecodecamp = https://www.freecodecamp.org/news/javascript-array-tutorial-array-methods-in-js/
 
@@ -243,38 +257,38 @@ localstorage.key(0) = ye method key ka name get krne ke liye use krte hain jo in
 localstorage guide = https://www.freecodecamp.org/news/use-local-storage-in-modern-applications/
 
 Day 19 - JavaScript DOM
-DOM (document object model) = basically a structured representation of an html document. kind of tree of nodes or elements created by the browser. DOM is object oriented meaning that each node has its own properties and methods
-HTML collection array jesa dikhta hai but is mien aur array mein ye difference hai ke html collection ke sth ham array ka har method use nhi kr skte iske liye hamein collection ko array banaana prta hai pehle
-innerText aur textContent difference = ye dono hi text ko change krne ke liye use hote hain, difference ye hai ke innerText zaadaa attention deta hai styles pr jese agr kisis element ko display: none; property di to innerText mein bhi wo show nhi hoga lekin textContent mein show hota hai even page se hide hojaata hai tb bhi 
-querySelector = is mein aap koi bhi css selector use krke element select kr skte hain
-nodelist = querySelectorAll ye return krta hai hamain, jis pr ham easily array methods run kr skte hain unlike html collection
-text node = represent white spaces like line break that's why instead of using childNodes, use children and instead of using firstChild, use firstElementChild
+- DOM (document object model) = basically a structured representation of an html document. kind of tree of nodes or elements created by the browser. DOM is object oriented meaning that each node has its own properties and methods
+- HTML collection = array jesa dikhta hai but is mien aur array mein ye difference hai ke html collection ke sth ham array ka har method use nhi kr skte iske liye hamein collection ko array banaana prta hai pehle
+- innerText aur textContent difference = ye dono hi text ko change krne ke liye use hote hain, difference ye hai ke innerText zaadaa attention deta hai styles pr jese agr kisis element ko display: none; property di to innerText mein bhi wo show nhi hoga lekin textContent mein show hota hai even page se hide hojaata hai tb bhi 
+- querySelector = is mein aap koi bhi css selector use krke element select kr skte hain
+- nodelist = querySelectorAll ye return krta hai hamain, jis pr ham easily array methods run kr skte hain unlike html collection
+- text node = represent white spaces like line break that's why instead of using childNodes, use children and instead of using firstChild, use firstElementChild
 - isi tarh lastChild aur lastElementChild method hai, nextSibling aur nextElementSibling method hai, previousSibling aur previousElementSibling hai jo eik text node deta hai aur eik sahi kaam krta hai
-className = kisi bhi element ki classes get krne ke liy yehi use krte hain 
-e.type = bataata hai konsa event hai ye jo abhi trigger hua
-e.clientX & e.clientY = ye mouse ki pisition bataate hain window se
-e.offsetX & e.offsetY = ye mouse ki position usi element se bataata hai jis pr event trigger hua hai
-event.ctrlKey, event.shiftKey & event.altKey = ye boolean value return krte hain like in keys hold krke agr koi event trigger hua to ye methods true return karengay wrna false 
-mouseenter = event hai jo sirf element pr hi trigger hota hai
-mouseover = event hai jo inner elements pr bhi trigger hojaata hai yehi difference baaqi dono eik jese hain
-mouseleave = element ke baahar jaane pr trigger hota hai
-mouseout = element ke baahar jaane pr aur inner element se baahar jaane pr bhi trigger hota hai
+- className = kisi bhi element ki classes get krne ke liye yehi use krte hain 
+- e.type = bataata hai konsa event hai ye jo abhi trigger hua
+- e.clientX & e.clientY = ye mouse ki pisition bataate hain window se
+- e.offsetX & e.offsetY = ye mouse ki position usi element se bataata hai jis pr event trigger hua hai
+- event.ctrlKey, event.shiftKey & event.altKey = ye boolean value return krte hain like in keys hold krke agr koi event trigger hua to ye methods true return karengay wrna false 
+- mouseenter = event hai jo sirf element pr hi trigger hota hai
+- mouseover = event hai jo inner elements pr bhi trigger hojaata hai yehi difference baaqi dono eik jese hain
+- mouseleave = element ke baahar jaane pr trigger hota hai
+- mouseout = element ke baahar jaane pr aur inner element se baahar jaane pr bhi trigger hota hai
 - keypress event is deprecated thats why always use keydown event
-keydown event = tab trigger hota hai jab key press hoti hai, lekin us waqt character input field mein add nahi hua hota. Isliye e.target.value purani value return karta hai (jo input ke andar tha key press hone se pehle).
-keypress event = Jab printable character key press hoti hai. No value updated
-keyup event = Jab key chhodi jaati hai (key release hoti hai), updated value milti hai
-input event = Jab input value change hoti hai (real-time typing), yehi best hai updated value milti hai
+- keydown event = tab trigger hota hai jab key press hoti hai, lekin us waqt character input field mein add nahi hua hota. Isliye e.target.value purani value return karta hai (jo input ke andar tha key press hone se pehle).
+- keypress event = Jab printable character key press hoti hai. No value updated
+- keyup event = Jab key chhodi jaati hai (key release hoti hai), updated value milti hai
+- input event = Jab input value change hoti hai (real-time typing), yehi best hai updated value milti hai
 
 Day 20 - JavaScript Events (apna college)
-event = the change in the state of an object
-event handling = event generate hone ke baad kch kaam krwaana
-inline event handling = html mein hi hoti hai onclick ya on<eventName> ka use krke, which is not recommended
-event handling in js = btn.onclick = function(){ // handle here }
+- event = the change in the state of an object
+- event handling = event generate hone ke baad kch kaam krwaana
+- inline event handling = html mein hi hoti hai onclick ya on<eventName> ka use krke, which is not recommended
+- event handling in js = btn.onclick = function(){ // handle here }
 - agr inline aur js dono mein event handle kia hai to priority js ko hoti hai, inline ko nhi.
-event object = eik special object jo event ki details deta hai
-event listeners = iske through ham same events pr multiple kaam kr waa skte hain, isi liye yehi recommended hai aur yehi use karengay
+- event object = eik special object jo event ki details deta hai
+- event listeners = iske through ham same events pr multiple kaam kr waa skte hain, isi liye yehi recommended hai aur yehi use karengay
 - the callback reference should be same to remove event listener 
-toggling or toggle button = means 2 state ke beech switch krte rehna
+- toggling or toggle button = means 2 state ke beech switch krte rehna
 
 Day 21 - JavaScript ES6 Refactor (Net Ninja)
 ecmascript = is a standard for scripting languages, ES5 is current version implemented into most browsers
@@ -368,24 +382,22 @@ Test create / update / delete after page refresh
 Handle empty input (show alert)
 No duplicate IDs
 
-Day 26 - JavaScript Debugging & Bug Fixing 🐞🔍
+Day 26 - JavaScript Debugging & Bug Fixing 🐞🔍 (freecodecamp, xplodivity, tapas adhikary)
 Learn how to properly debug JavaScript code like a pro!
 🛠 Topics Covered:
 ✅ Using Browser Dev Tools (Chrome / Firefox)
 ✅ Setting Breakpoints
 ✅ Console Logging Best Practices
 ✅ Common JavaScript Errors and Fixes
-Syntax errors = they are thrown when the JavaScript engine encounters something it can't interpret.
-A ReferenceError = is thrown when a non-existent variable is referenced. for example you trying to use math but JavaScript doesn't have a math object.
-A TypeError means = that the code is trying to perform an operation on a value that is not of the expected type.
-null = is a special value in JavaScript that represents the absence of a value. This can happen when you try to access a property of an object that doesn't exist.
+- Syntax errors = they are thrown when the JavaScript engine encounters something it can't interpret.
+- ReferenceError = is thrown when a non-existent variable is referenced. for example you trying to use math but JavaScript doesn't have a math object.
+- TypeError means = that the code is trying to perform an operation on a value that is not of the expected type.
+- null = is a special value in JavaScript that represents the absence of a value. This can happen when you try to access a property of an object that doesn't exist.
 undefined = when the variable is not being set correctly.
-
-dark colors = #2C3E50, #34495E, #2C2C2C, #616A6B, #4A235A, #2F4F4F, #0E4B5A, #36454F, #2C3E50, #800020
-
-breakpoint = is a point of code where debugger will automatically pause the javascript execution and while the code is paused we can examine current variables, execute commands in the console and so on, in other words we can debug it.
-state of our code = state of our local or global variables, it also means the funciton parameters, basically everything we see in the code before breakpoint
-watch section in debugger pane = basically shows current values for any expressions, but hamein pehle add krna prta hai variable ka naam
+- dark colors = #2C3E50, #34495E, #2C2C2C, #616A6B, #4A235A, #2F4F4F, #0E4B5A, #36454F, #2C3E50, #800020
+- breakpoint = is a point of code where debugger will automatically pause the javascript execution and while the code is paused we can examine current variables, execute commands in the console and so on, in other words we can debug it.
+- state of our code = state of our local or global variables, it also means the funciton parameters, basically everything we see in the code before breakpoint
+- watch section in debugger pane = basically shows current values for any expressions, but hamein pehle add krna prta hai variable ka naam
 callstack section = shows the nestes calls chain, basically it shows what funciton currently being run and what funcitons are called from within that function, jb bht saaray functions hote hain to hr function click pr krne se uske variables display hojaate hain scope section mein
 scope section = shows you what local and global variables are currently defined, along with the value of each variable
 script dropdown in scope = always include let and const variables declared outside the funciton
@@ -415,3 +427,7 @@ Debugging Tips:
 5. tools
 6. take a break
 7. dont giveup
+
+Day 27 - JavaScript Review + Start Portfolio
+🧠 Focus Areas: Review core JS concepts -> Variables, Loops, Functions, DOM manipulation, Events
+Start building your Portfolio Website
