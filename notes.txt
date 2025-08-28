@@ -367,3 +367,51 @@ Persist => Save & load notes with localStorage
 Test create / update / delete after page refresh
 Handle empty input (show alert)
 No duplicate IDs
+
+Day 26 - JavaScript Debugging & Bug Fixing 🐞🔍
+Learn how to properly debug JavaScript code like a pro!
+🛠 Topics Covered:
+✅ Using Browser Dev Tools (Chrome / Firefox)
+✅ Setting Breakpoints
+✅ Console Logging Best Practices
+✅ Common JavaScript Errors and Fixes
+Syntax errors = they are thrown when the JavaScript engine encounters something it can't interpret.
+A ReferenceError = is thrown when a non-existent variable is referenced. for example you trying to use math but JavaScript doesn't have a math object.
+A TypeError means = that the code is trying to perform an operation on a value that is not of the expected type.
+null = is a special value in JavaScript that represents the absence of a value. This can happen when you try to access a property of an object that doesn't exist.
+undefined = when the variable is not being set correctly.
+
+dark colors = #2C3E50, #34495E, #2C2C2C, #616A6B, #4A235A, #2F4F4F, #0E4B5A, #36454F, #2C3E50, #800020
+
+breakpoint = is a point of code where debugger will automatically pause the javascript execution and while the code is paused we can examine current variables, execute commands in the console and so on, in other words we can debug it.
+state of our code = state of our local or global variables, it also means the funciton parameters, basically everything we see in the code before breakpoint
+watch section in debugger pane = basically shows current values for any expressions, but hamein pehle add krna prta hai variable ka naam
+callstack section = shows the nestes calls chain, basically it shows what funciton currently being run and what funcitons are called from within that function, jb bht saaray functions hote hain to hr function click pr krne se uske variables display hojaate hain scope section mein
+scope section = shows you what local and global variables are currently defined, along with the value of each variable
+script dropdown in scope = always include let and const variables declared outside the funciton
+- var keyword se banne waala variable global hota hai aur global dropdown mein show hota hai, so in browser you can access it as a property of window
+- by let and const they dont become global variables, you can access them in another script tag
+- so mtlb ye hua let and const ke sth variables even if globally defined ho tb bhi global nhi hain
+- global variable sirf var ke sth bnte hain
+- resume icon (F8) = execution ko next line mein continue krne ke liye use hota hai yaani next breakpoint pr, jese hi last breakpoint aata hai aur resume krte hain to Debugging end hojaati hai
+- step icon (F9) = it basically run the next statement, next line pr step krta hai jis tarh script run krti hai us order mein yaani koi funciton aaya to us funciton ke andr chala jaayega aur phr end hone pr again apni jaga se shuru karega
+- step over icon (F10) = nested function mein nhi jaata balke usko run krke next line hi pr aajata hai aur line by line hi run krta hai, but funciton execute zaroor hota hai bina us function ke andr jaaye (ye yaad rkhna hai)
+- step command ignores the async actions, but step into icon ignore nhi krta
+- step into (F11) = goes into code waiting for any async action if necessary
+- step out (shift + F11) = continues the execution till the end of current function, aur ye tb kaam aata hai jb ham accidently kisi function call ke andr enter hojaayen by using step icon aur hamein us se baahar nikalna ho as soon as possible
+- debugging = the process of tracking a bug or a issue
+- fixing = the removal of the bug once you debug and find it
+- conditional breakpoints = bhi ham set kr skte hain jese agr expression "john" ho to pause hojaao
+- event listeners aur dom breakpoints bhi lagaa skte hain ham using dev tools
+- debugger keyword = iska use krke bhi ham direct pause lagaa skte hain jis pe wo debugger keyword waali line pr hi pause karega (but not recommended)
+- workspace = jb hamein fix krna ho dev tools ke andr hi aur save bhi krna ho so wohi changes automatically reflect karen vscode mein iske liye ham workspace use krte hain
+- file ke sth * sign means = file save nhi hui so save it using ctrl + s
+- vscode se bhi ham dev tools ki tarh debugging kr skte hain, sirf thori se configuration krni prti hai bs phr saara same setup create hojaata hai
+Debugging Tips:
+1. accept
+2. bigger picture
+3. debug other's code
+4. discuss
+5. tools
+6. take a break
+7. dont giveup
