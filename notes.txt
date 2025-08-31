@@ -429,5 +429,4 @@ Debugging Tips:
 7. dont giveup
 
 Day 27 - JavaScript Review + Start Portfolio
-🧠 Focus Areas: Review core JS concepts -> Variables, Loops, Functions, DOM manipulation, Events
-Start building your Portfolio Website
+🧠 Focus Areas: Review core JS concepts -> Variables, Loops, Functions, DOM manipulation, Events and then Start building your Portfolio Website
