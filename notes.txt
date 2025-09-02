@@ -6,6 +6,7 @@ Explore krne waalay topics:
 - :target, :notlexbox pseudo class in CSS
 - video left from oop in JS Basics
 - day 10, 11 & 12 coding section is left + day12 some topics of js is also left
+- css responsiveness kewin powell course
 
 Day 01 - HTML Basics: (Traversy Media)
 - HTML = markup language for creating webpages / documents, building blocks of the web.
@@ -28,8 +29,8 @@ Day 02 - CSS BASICS (Traversy Media)
 CSS = used for website layout and design, can be extended with Sass/Less
 
 Day 03 - CSS FLEXBOX (Net Ninja)
-flex-grow = we use it to expand elements into available space by giving each flex item a growth rate
-flex-shrink = we use it to shrink elements as the browser gets smaller by giving each flex item a shirnk rate
+- flex-grow = we use it to expand elements into available space by giving each flex item a growth rate
+- flex-shrink = we use it to shrink elements as the browser gets smaller by giving each flex item a shirnk rate
 - by default, flex items shrink in proportion to one another at same rate
 flex-basis = minimum width ki tarh kaam krta hai aur same tarh behave krta hai, inital width set krta hai items ki, bs eik farq hai ke minimum width dene pr shrink krne se horizontal scrollbar aata hai jabke flex-basis ka use krke shrink krne se items shrink hojaate hain 
 - minimum width use krke flex grow: 1; krne se sb items grow krke same hojaate hain jabke flex-basis use krke flex-grow: 1; krne se items inital width ke hisaab se hi grow krte hain
@@ -41,7 +42,7 @@ grid rows = automatically create hoti hain when we have content aur column fix h
 grid-auto-rows = container ki property hai jiska use krke ham tamam grid items ki height set krte hain, is mein minmax bhi use kr skte hain
 align-items & justify-content = container property hai jo saaray items ki alignment ke liye use krte hain aur content jitni space le kr items align hojaate hain
 
-Day 05 - Responsive Design in CSS (Kevin Powell)
+Day 05 - Design in CSS (Kevin Powell)
 - by default things are responsive, agr sirf html code hai aur eik line css ki nhi hai tb bhi wo website responsive hogi, hn thori ajeeb dikhegi but hogi responsive
 - css mein values de kr ham khud responsive khatam krte hain, so by default responsive hoti hai 100% width ki waja se on all block level elements, so that's why while creating layout we should never use fixed width (like in pixels) for parent element.
 - and for child element also we should never use fixed width bcuz is se overflow issue aajata hai, content overflow hota hai
@@ -430,3 +431,23 @@ Debugging Tips:
 
 Day 27 - JavaScript Review + Start Portfolio
 🧠 Focus Areas: Review core JS concepts -> Variables, Loops, Functions, DOM manipulation, Events and then Start building your Portfolio Website
+
+Day 28 - CSS Review – Layouts & Best Practices
+Add: Navbar with logo & links, Footer with your GitHub/LinkedIn, ✅ Responsive layout using Flexbox and Grid
+- we can use CSS to make elements completely hidden from the visual page, but still be announced by screen readers.
+- span[class~="sr-only"] = selector will select any span element whose class includes sr-only
+- CSS clip property = is used to define the visible portions of an element. 
+- clip property of rect(1px, 1px, 1px, 1px).
+- clip-path property = determines the shape the clip property should take. 
+- clip-path property to the value of inset(50%), forming the clip-path into a rectangle within the element.
+- To prevent the text content from overflowing, we can give an overflow property set to hidden and a white-space property set to nowrap.
+- when you need to take hidden elements out of the document flow give a position property set to absolute, a padding property set to 0, and a margin property set to -1px. This will ensure that not only are they no longer visible, but they are not even within the page view.
+- The :first-of-type pseudo-selector = is used to target the first element that matches the selector.
+- Adding position sticky moved the element into its own stack. To ensure your element does not get hidden by different stacks, add a z-index property set to 999.
+- The span[class] syntax will target any span element that has a class attribute set, regardless of the attribute's value.
+- The :not() pseudo-selector = is used to target all elements that do not match the selector 
+- span:not(.sr-only) = any of your span elements that do not have the sr-only class.
+- Rather than having to constantly double-check you are not overwriting your earlier properties, you can use the !important keyword to ensure these properties are always applied, regardless of order or specificity.
+-  border-collapse property to collapse = will allow cell borders to collapse into a single border, instead of a border around each cell.
+- Give a width to fill the viewport, with a minimum and maximum of 4rem. This approach ensures that the width is fixed, whereas setting width specifically would allow the elements to shrink to the container.
+- The key difference between tr[class="total"] and tr.total is that the first will select tr elements where the only class is total. The second will select tr elements where the class includes total.

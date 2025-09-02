@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -10,108 +8,250 @@ body {
   background-color: #151515;
   color: #fff;
   font-family: "Heebo", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 hr {
-  max-width: 900px;
-  margin: 0px auto 40px;
+  max-width: calc(1000px - 40px);
+  margin: 3rem auto 4rem;
+  width: calc(100% - 40px);
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  padding: 0 20px;
 }
 
-header {
-  padding: 40px 0;
+.header {
+  padding: 32px 0;
 }
 
-header .container {
+.header .container,
+footer .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
-header #logo {
+.logo {
   font-size: 1.5rem;
 }
 
 nav i {
-  margin-right: 12px;
+  margin-left: 12px;
+  font-size: 20px;
 }
 
-#heading {
-  margin: 60px 0;
+/* HOME */
+.home-section .container {
+  min-height: calc(100vh - 116px);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
-main h1 {
-  font-size: 3rem;
+.home-section .intro-content {
+  width: 62%;
+}
+
+.intro-content .greetings {
+  margin: 4rem 0;
+}
+
+.greetings h1 {
+  font-size: 4rem;
   letter-spacing: 2px;
-  margin: -16px 0;
+  line-height: 64px;
 }
 
-main h1 span {
+.greetings h1 span {
+  display: inline-block;
+  line-height: 1;
   border-bottom: 4px solid #6fe2a1;
 }
 
-main p {
+.intro-content p {
   color: #acacac;
-  width: 40%;
-  margin-top: 40px;
-  font-size: 14px;
+  max-width: 450px;
+  margin-bottom: 4rem;
+  font-size: 1.125rem;
   letter-spacing: 2px;
 }
 
-#home a, #projects-header a  {
+.contact-link {
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
   border-bottom: 2px solid #6fe2a1;
-  display: inline-block;
   padding-bottom: 4px;
 }
 
-#home a {
-  margin-top: 40px;
+.home-section .image-container {
+  position: absolute;
+  width: 40%;
+  height: 600px;
+  background-color: #242424;
+  top: -124px;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 12px;
+  min-width: 300px;
 }
 
-#home {
-  min-height: calc(100vh - 116px);
+.image-container img {
+  margin-top: 80px;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1%);
 }
 
-#projects-header {
+/* PROJECTS */
+
+.projects-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 32px 0;
 }
 
-#projects-container {
+.projects-gallery {
+  /* border: 1px solid red; */
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
+  /* max-width: 1400px; */
+  /* margin: 0 auto; */
+}
+
+.projects-gallery > * {
+  /* flex: 1 1 280px; */
+  max-width: 280px;
+}
+
+.projects-gallery::after{
+  content: "";
+  width: 280px;
 }
 
 .project {
+  /* flex-shrink: 1; */
+  /* width: 100%;
+  flex: 0 1 33%;
+  max-width: 300px; */
 }
 
-.project-img {
-  width: 300px;
-  height: 300px;
-  margin-bottom: 12px;
+.project a {
+  display: inline-block;
+  width: 100%;
 }
 
-.project-img img {
+img {
   max-width: 100%;
+  height: auto;
   object-fit: cover;
+  width: 100%;
 }
 
-.project h3{
+.project h3 {
   margin-bottom: 4px;
   text-transform: uppercase;
 }
 
-.project span{
+.project span {
   font-size: 14px;
   color: #acacac;
   margin-right: 4px;
+}
+
+footer {
+  padding: 40px 0;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 990px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  .intro-content .greetings {
+    margin: 4rem 0 3rem;
+  }
+
+  .intro-content p {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 11px;
+  }
+
+  header .container, footer .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav i {
+    font-size: 20px;
+  }
+
+  .home-section .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    position: static;
+  }
+
+  .home-section .intro-content {
+    text-align: center;
+    width: 90%;
+    margin-top: 264px;
+  }
+
+  .greetings h1 {
+    font-size: 3rem;
+    line-height: 48px;
+  }
+
+  .home-section .image-container {
+    text-align: center;
+    height: 420px;
+    margin: 0 auto;
+    top: 0;
+    right: unset;
+    border-radius: 0;
+  }
+
+  .image-container img {
+    height: auto;
+    margin-top: 100px;
+  }
 }
