@@ -28,51 +28,60 @@ Semantic tags = clearly describe its meaning to both the browser and the develop
 Day 02 - CSS BASICS (Traversy Media)
 CSS = used for website layout and design, can be extended with Sass/Less
 
-Day 03 - CSS FLEXBOX (Net Ninja)
+Day 03 - CSS FLEXBOX (Net Ninja & Self Revision)
 - flex-grow = we use it to expand elements into available space by giving each flex item a growth rate
 - flex-shrink = we use it to shrink elements as the browser gets smaller by giving each flex item a shirnk rate
 - by default, flex items shrink in proportion to one another at same rate
 flex-basis = minimum width ki tarh kaam krta hai aur same tarh behave krta hai, inital width set krta hai items ki, bs eik farq hai ke minimum width dene pr shrink krne se horizontal scrollbar aata hai jabke flex-basis ka use krke shrink krne se items shrink hojaate hain 
 - minimum width use krke flex grow: 1; krne se sb items grow krke same hojaate hain jabke flex-basis use krke flex-grow: 1; krne se items inital width ke hisaab se hi grow krte hain
-flex-flow = shorthand for flex-direction and flex-flow
+flex-flow = shorthand for flex-direction and flex-wrap
 order = default value 0 hoti hai aur agr 0 value khud se di to source code ke according items order hongay, jitni lowest value wo item pehle aayega aur highest order waala item last mein aayega
+- Sometimes reversing the row or column order of a container is not enough. so in those cases, we can apply order property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
+- align-self = Another property you can apply to individual items, it accepts the same values as align-items for the specific item.
+- align-content = to set how multiple lines are spaced apart from each other. value: flex-start, flex-end, center, space-between, space-around, space-evenly, stretch (default). It determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
+- flex-grow by default 0 hota hai aur flex-shrink by default 1 hota hai
+- flex = shorthand property hai grow, shrink aur basis ki
 
-Day 04 - CSS Grid (Net Ninja)
-grid rows = automatically create hoti hain when we have content aur column fix hote hain so phr nayi row mein content shift hojaata hai
-grid-auto-rows = container ki property hai jiska use krke ham tamam grid items ki height set krte hain, is mein minmax bhi use kr skte hain
-align-items & justify-content = container property hai jo saaray items ki alignment ke liye use krte hain aur content jitni space le kr items align hojaate hain
+Day 04 - CSS Grid (Net Ninja & Self Revision)
+- grid rows = automatically create hoti hain when we have content aur column fix hote hain so phr nayi row mein content shift hojaata hai
+- grid-auto-rows = container ki property hai jiska use krke ham tamam grid items ki height set krte hain, is mein minmax bhi use kr skte hain
+- align-items & justify-content = container property hai jo saaray items ki alignment ke liye use krte hain aur content jitni space le kr items align hojaate hain
+- grid-column-start = specifies start position of grid item within grid columns. value: <integer>, span <integer>. When grid-column-start is used alone, grid item by default will span exactly one column
+- you might assume that the end value has to be greater than the start value. But this turns out not the case!
+- If you want to count grid lines from the right instead of the left, you can give grid-column-start and grid-column-end negative values. For example, you can set it to -1 to specify the first grid line from the right.
+- span keyword = you can also define grid item based on your desired column width using the span keyword. Keep in mind that span only works with positive values.
+- grid-column is a shorthand property that can accept both (start and end) values at once, separated by a slash.
+- grid area = If typing out both grid-column and grid-row is too much for you, it is yet another shorthand for that. grid-area accepts four values separated by slashes: grid-row-start, grid-column-start, grid-row-end, followed by grid-column-end.
+- order = all grid items have an order of 0, but this can be set to any positive or negative value, similar to z-index.
+- fr = Grid also introduces a new unit, the fractional fr. Each fr unit allocates one share of the available space. For example, if two elements are set to 1fr and 3fr respectively, the space is divided into 4 equal shares; the first element occupies 1/4 and the second element 3/4 of any leftover space.
+- When columns are set with pixels, percentages, or ems, any other columns set with fr will divvy up the space that's left over.
+- grid-template-rows har waqt set krna recommended nhi hai balke columns set krne ke baad grid automatically rows create krta hai content ke hisaab se
+- grid-auto-columns and grid-auto-rows means any automatically generated rows aur columns ka kia size rkhna hai wo batao
 
 Day 05 - Design in CSS (Kevin Powell)
 - by default things are responsive, agr sirf html code hai aur eik line css ki nhi hai tb bhi wo website responsive hogi, hn thori ajeeb dikhegi but hogi responsive
 - css mein values de kr ham khud responsive khatam krte hain, so by default responsive hoti hai 100% width ki waja se on all block level elements, so that's why while creating layout we should never use fixed width (like in pixels) for parent element.
 - and for child element also we should never use fixed width bcuz is se overflow issue aajata hai, content overflow hota hai
-
 - height kabhi nhi deni chahiye is a general suggestion
 - the web wants to be responsive with css, ham isko non responsive banaate hain
 - so ham height ki jaga padding use kr skte hain jis se layout responsive rehta hai
-
--em unit font-size mein dia hai so apne parent se relate krta hai yaani parents mein agr kisi ka font size hai to usi ke according work krta hai, but agr kisi parent ka font size nhi hai so body ka 16px ke according work krta hai, its like compounding.
+-em unit font-size mein dia jaata hai so apne parent se relate krta hai yaani parents mein agr kisi ka font size hai to usi ke according work krta hai, but agr kisi parent ka font size nhi hai so body ka 16px ke according work krta hai, its like compounding.
 - aur agr kisi aur css property mein em unit use kia to wo usi element ke font-size se relate krta hai
 -rems unit are always looking for root, so ye compounding ka issue solve krti hai aur html ke font-size se relate krta hai ye rem unit
 - so rem unit consistency ke liye use hota hai aksar
-- so for font size we should use rems, and em unit for margin (jo lock naa krni ho like margin-bottom) and padding, wrna margin ke liye bhi rem use kr skte hain if we want consistent margin
-
-- width ke saath ham use krte hain max-width for better desingn on big screen so is se text aur content poora stretch nhi hota from left to right, balke eik specific size pr ruk jaata hai
+- for font size we should use rems, and em unit for margin (jo lock naa krni ho like margin-bottom) and padding, wrna margin ke liye bhi rem use kr skte hain if we want consistent margin
+- width ke saath ham use krte hain max-width for better design on big screen so is se text aur content poora stretch nhi hota from left to right, balke eik specific size pr ruk jaata hai
 - height ki tarah min-width bhi zaada use nhi krte bcuz is se bhi issues aa skte hain responsiveness mein, so jahan bht need ho wahi use krna chahiye
-
 flex items = apni width ko kam se kam rkhne ki koshish krte hain yaani content ke hisaab se hi, taakay eik row mein sb fit hojaayen, zaada se zaada 100% width bhi hoti hai if there is only one flex item
 - so ham flex items ko 100% de skte hain so that agr content kam bhi hojaye width kam naa ho
 - gap property for flexbox use nhi krni chahiye bcuz ye sirf firefox pr sahi chalti hai, so iski jaga ham + combinator selector ka use krte hain
 "+" combinator selector = adjacent sibling dekhta hai before element
-
-can i use website for checking css properties if they are running or not?
-
 - flexbox by default apne items ki height stretch krke rkhta hai
 - justify-content: space-between; ke liye zaroori hai ke ham items ki width kch naa kch kam rkhen jbhi property work karegi
 - img ko responsive banaane ke liye hamesha max-width: 100% use karen thats it
 - grid is for structured layout, while flexbox is for intrint sizing
 - both can work same for us
-
+- grid kaafi easy to start hai so isliye thora better rehta hai
 
 Git Deep Dive (Traversy Media)
 Topics:
@@ -494,3 +503,5 @@ The @media at-rule = has a media feature called prefers-reduced-motion to set CS
   }
 }
 
+Day 30 - Portfolio & SEO Mastery
+Topics: Create a professional, SEO-friendly developer portfolio and deploy it publicly.

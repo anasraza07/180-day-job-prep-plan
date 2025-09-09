@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
-
 * {
   box-sizing: border-box;
 }
@@ -165,26 +163,14 @@ nav i {
   padding: 32px 0;
 }
 
+.projects-header h2{
+  margin-top: 0;
+}
+
 .projects-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
   gap: 28px 20px;
-}
-
-.projects-gallery::after{
-  content: "";
-  width: 260px;
-}
-
-.project{
-  max-width: 260px;
-  width: 100%;
-}
-
-.project-img{
-  height: 250px;
 }
 
 .project a {
@@ -195,8 +181,10 @@ nav i {
 
 .project a img {
   object-fit: cover;
+  object-position: top;
   width: 100%;
-  height: 100%;
+  height: 220px;
+  display: block;
 }
 
 .project h3 {
