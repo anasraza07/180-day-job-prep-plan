@@ -451,3 +451,46 @@ Add: Navbar with logo & links, Footer with your GitHub/LinkedIn, ✅ Responsive 
 -  border-collapse property to collapse = will allow cell borders to collapse into a single border, instead of a border around each cell.
 - Give a width to fill the viewport, with a minimum and maximum of 4rem. This approach ensures that the width is fixed, whereas setting width specifically would allow the elements to shrink to the container.
 - The key difference between tr[class="total"] and tr.total is that the first will select tr elements where the only class is total. The second will select tr elements where the class includes total.
+
+Day 29 - HTML Review – Structure, Semantics & Accessibility
+Topics: Master clean and semantic HTML, enhance accessibility, and build more pages for your portfolio site. Add About page (your journey, goals) Add Projects page (your apps like quiz app, notes app, etc.) Use semantic tags: <section>, <article>, <nav>, <main>, etc. Use accessible HTML practices 
+(e.g., <label>, alt, headings order) Ensure site works with keyboard only (for accessibility check) Use browser accessibility tools (Lighthouse)
+- lang attribute to your html element = will assist screen readers in identifying the language of the page.
+- meta element = used to specify information about the page, such as the title, description, keywords, and author.
+- a viewport definition = tells the browser how to render the page. Including one betters visual accessibility on mobile, and improves SEO (search engine optimization).
+- description definition = important meta element for accessibility and SEO
+- title element = useful for screen readers to understand the content of a page. Furthermore, it is an important part of SEO.
+- Navigation is a core part of accessibility, and screen readers rely on you to provide the structure of your page. This is accomplished with semantic HTML elements.
+- max function = of css which returns the largest of a set of comma-separated values. For example:
+img {
+  width: max(250px, 25vw);
+}
+- In the above example, the width of the image will be 250px if the viewport width is less than 1000 pixels. If the viewport width is greater than 1000 pixels, the width of the image will be 25vw. This is because 25vw is equal to 25% of the viewport width.
+- The child combinator selector ">" = used between selectors to target only elements that match the second selector and are a direct child of the first selector. can be helpful when you have deeply nested elements and want to control the scope of your styling.
+- role = To increase the page accessibility, the role attribute can be used to indicate the purpose behind an element on the page to assistive technologies. The role attribute is a part of the Web Accessibility Initiative (WAI), and accepts preset values.
+- Every region role requires a label, which helps screen reader users understand the purpose of the region. One method for adding a label is to add a heading element inside the region and then reference it with the aria-labelledby attribute.
+- Typeface plays an important role in the accessibility of a page. Some fonts are easier to read than others, and this is especially true on low-resolution screens.
+- use Verdana or another web-safe font in the sans-serif family 
+- Keeping in mind best-practices for form inputs, give each input an appropriate type and name attribute.
+- adding placeholder = is actually not a best-practice for accessibility; too often, users confuse the placeholder text with an actual input value - they think there is already a value in the input.
+- so using label is the best-practice. 
+- There is a common pattern to visually hide text for only screen readers to read:
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+clip-path: inset(50%);
+white-space: nowrap;
+- footer element = is a container for a collection of content that is related to the page, 
+- address element = is a container for contact information for the author of the page. it does not have to contain a physical geographical location. It can be used to provide a link to the subject.
+- On the topic of visual accessibility, contrast between elements is a key factor. so the contrast between the text and the background of a heading should be at least 4.5:1.
+- certain types of motion-based animations can cause discomfort for some users. In particular, people with vestibular disorders have sensitivity to certain motion triggers.
+The @media at-rule = has a media feature called prefers-reduced-motion to set CSS based on the user's preferences. It can take one of the following values: reduce or no-preference
+- Example Code:
+@media (feature: value) {
+  selector {
+    styles
+  }
+}
+

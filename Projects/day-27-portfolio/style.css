@@ -25,6 +25,16 @@ hr {
   width: calc(100% - 40px);
 }
 
+p {
+  color: #acacac;
+  font-size: 0.9rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -118,7 +128,35 @@ nav i {
   filter: saturate(1%);
 }
 
-/* PROJECTS */
+/* about */
+.about-section .container > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-section .container > div > * {
+  width: 49%;
+}
+
+.my-goals li {
+  color: #acacac;
+  padding: 6px 0 4px;
+  border-bottom: 1px solid rgba(234, 233, 233, 0.569);
+  font-size: 0.9rem;
+}
+
+.bottom-line {
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+
+.bottom-line span {
+  color: #fff;
+}
+
+/* projects */
 
 .projects-header {
   display: flex;
@@ -128,47 +166,41 @@ nav i {
 }
 
 .projects-gallery {
-  /* border: 1px solid red; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  /* max-width: 1400px; */
-  /* margin: 0 auto; */
-}
-
-.projects-gallery > * {
-  /* flex: 1 1 280px; */
-  max-width: 280px;
+  gap: 28px 20px;
 }
 
 .projects-gallery::after{
   content: "";
-  width: 280px;
+  width: 260px;
 }
 
-.project {
-  /* flex-shrink: 1; */
-  /* width: 100%;
-  flex: 0 1 33%;
-  max-width: 300px; */
+.project{
+  max-width: 260px;
+  width: 100%;
+}
+
+.project-img{
+  height: 250px;
 }
 
 .project a {
   display: inline-block;
   width: 100%;
+  height: 100%;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.project a img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 .project h3 {
-  margin-bottom: 4px;
+  margin: 12px 0 2px;
   text-transform: uppercase;
 }
 
@@ -179,7 +211,7 @@ img {
 }
 
 footer {
-  padding: 40px 0;
+  padding: 12px 0 40px;
 }
 
 /* MEDIA QUERIES */
@@ -201,6 +233,15 @@ footer {
   .intro-content p {
     margin-bottom: 3rem;
   }
+
+  .about-section .container > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section .container > div > * {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -208,7 +249,8 @@ footer {
     font-size: 11px;
   }
 
-  header .container, footer .container {
+  header .container,
+  footer .container {
     flex-direction: column;
     justify-content: center;
     gap: 12px;
