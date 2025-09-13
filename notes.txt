@@ -41,6 +41,8 @@ order = default value 0 hoti hai aur agr 0 value khud se di to source code ke ac
 - align-content = to set how multiple lines are spaced apart from each other. value: flex-start, flex-end, center, space-between, space-around, space-evenly, stretch (default). It determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
 - flex-grow by default 0 hota hai aur flex-shrink by default 1 hota hai
 - flex = shorthand property hai grow, shrink aur basis ki
+- jese hi ham display flex krte hain so container apne items ko shrink krta hai as smallest as possible because flex-items mein by default shrink 1 aur grow 0 hota hai
+- flex-grow: 1; krne se item saari available space le leta hai
 
 Day 04 - CSS Grid (Net Ninja & Self Revision)
 - grid rows = automatically create hoti hain when we have content aur column fix hote hain so phr nayi row mein content shift hojaata hai
@@ -82,6 +84,10 @@ flex items = apni width ko kam se kam rkhne ki koshish krte hain yaani content k
 - grid is for structured layout, while flexbox is for intrint sizing
 - both can work same for us
 - grid kaafi easy to start hai so isliye thora better rehta hai
+- kisi element ko to the right bhejne ke liye css handy trick: 
+margin-left: auto; krdo is se eik dam right pr chala jaata hai element
+- isi tarh gap ke bagair elements ke beech space dene ke liye:
+.item + .item { margin-left: 1em }; use kr skte hain jis se corners waale element disturb nhi hongay
 
 Git Deep Dive (Traversy Media)
 Topics:
@@ -505,3 +511,48 @@ The @media at-rule = has a media feature called prefers-reduced-motion to set CS
 
 Day 30 - Portfolio & SEO Mastery
 Topics: Create a professional, SEO-friendly developer portfolio and deploy it publicly.
+
+Day 31 - Async/Await & Weather App API
+Topics: Understanding async/await, Promises, and working with APIs in JavaScript. Build a simple weather app using OpenWeatherMap API, Input: city name. Output: show city’s temperature, weather condition, etc. Handle errors (e.g., city not found)
+- If you want data from an online source, you need use an API (Application Programming Interface). An API lets people from outside of an organization retrieve its internal data.
+- fetch = a method that allows code to receive data from an API by sending a GET request. Here is how you can make a GET request with the fetch() method:
+- Example Code:
+fetch("url-goes-here")
+- Promise = The fetch() method returns a Promise, it is a placeholder object that will either be fulfilled if your request is successful, or rejected if your request is unsuccessful.
+- If the Promise is fulfilled, it resolves to a Response object, and you can use the .then() method to access the Response.
+- Here's how you can chain .then() to the fetch() method
+Example Code:
+fetch("sample-url-goes-here")
+  .then((res) => res)
+- The data you get from a GET request is not usable at first. 
+- .json() = To make the data usable, you can use the .json() method on the Response object to parse it into JSON. If you expand the Prototype of the Response object in the browser console, you will see the .json() method there.
+- In order to start working with the data, you will need to use another .then() method. Chain another .then() to the existing .then() method. This time, pass in data as the parameter for the callback function.
+- .catch() = method is another asynchronous JavaScript method you can use to handle errors. This is useful in case the Promise gets rejected.
+- Chain .catch() to the last .then(). Pass in a callback function with err as the parameter. Inside the callback, use console.error() to log possible errors to the console with the text `There was an error: ${err}`
+- Note: catch is the last call chained on to fetch, so you can terminate your code with a semicolon.
+- if there's an error and the data fail to load, then we need to show an error in the UI. That's exactly what the .catch() method is for – handling errors.
+- asynchronous = request the data from an API is known as an asynchronous operation, which means that tasks execute independently of the main program flow. You can use the async keyword to create an asynchronous function, which returns a promise. Example Code:
+const example = async () => {
+  console.log("this is an example");
+};
+try...catch statement = to handle erros, try block is designed to handle potential errors, and the code inside the catch block will be executed in case an error occurs. Example Code
+try {
+  const name = "freeCodeCamp";
+  name = "fCC";
+} catch (err) {
+  console.log(err); // TypeError: Assignment to constant variable.
+}
+- we used fetch() with the .then() method to perform logic after the promise was resolved. But we can also use the await keyword to handle the asynchronous nature of the fetch() method.
+await keyword = waits for a promise to resolve and returns the result. Example Code:
+const example = async () => {
+  const data = await fetch("https://example.com/api");
+  console.log(data);
+}
+- the timeAgo function should meet the following requirements:
+1. If the amount of minutes that have passed is less than 60, return the string "xm ago". x will represent the minutes.
+2. If the amount of hours that have passed is less than 24, return the string "xh ago". x will represent the hours.
+3. Otherwise, return the string "xd ago". x will represent the days.
+- Here are some equations that will help you calculate the time difference:
+minutes = Math.floor((currentTime - lastPost) / 60000);
+hours = Math.floor((currentTime - lastPost) / 3600000);
+days = Math.floor((currentTime - lastPost) / 86400000);
