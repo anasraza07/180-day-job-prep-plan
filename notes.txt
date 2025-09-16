@@ -209,7 +209,7 @@ Topics: variable, data types, conditionals, console.log
 - let & const = have a block level scope 
 - primitive data types = directly assigned to memory  
 - null means basically empty
-- type of null is object why? is this wrong? and why it gives wrong value? = starting mein jab JavaScript pehli baar bana tha, toh usmein values ko ek khaas tarah se store kiya jaata tha, jise "type tag" kehte hain. object ka type tag 000 tha. Null ko us waqt ek "null pointer" ke taur par represent kiya gaya tha, jiska value bhi 000 hi hota tha. Is wajah se, jab typeof operator null ko check karta tha, toh usko lagta tha ke yeh bhi ek object hai, kyuki dono ka type tag same tha. 
+- why typeof null is object? is this wrong? why it gives wrong value? = starting mein jab JavaScript pehli baar bana tha, toh usmein values ko ek khaas tarah se store kiya jaata tha, jise "type tag" kehte hain. object ka type tag 000 tha. Null ko us waqt ek "null pointer" ke taur par represent kiya gaya tha, jiska value bhi 000 hi hota tha. Is wajah se, jab typeof operator null ko check karta tha, toh usko lagta tha ke yeh bhi ek object hai, kyuki dono ka type tag same tha. 
 - Ab isko theek kyun nahi karte? = JavaScript ab duniya mein har jagah istemaal hota hai. Agar is ghalti ko ab theek kar diya jaaye, toh bohot saari purani websites aur applications kaam karna band kar dengi. Is problem ko "backward compatibility" ke liye waisa hi chhor diya gaya hai, taake purana code ab bhi sahi kaam kare. Is masle se bachne ke liye, typeof ki jagah hamesha === ka istemaal karen.
 - value === null ka matlab hai ke value aur null dono bilkul barabar hain, baghair kisi ghalti ke.
 - typeof value === 'object' istemaal karna tab sahi hai jab aap ko maloom ho ke value null nahi ho sakti. 
@@ -228,6 +228,7 @@ Topics: for, while, forEach, loop control (break, continue)
 - continue keyword = we use it to just skip out the code for that iteration
 
 Day 14 - JavaScript Functions 
+Topics: declarations, expressions, parameter, return statements
 - paramter = something that we pass to a function while declaring or defining the function.
 - argument = the actual value we pass to the function while calling or invoking it.
 - function with parenthesis = executing, calling, invoking the function
@@ -235,7 +236,7 @@ Day 14 - JavaScript Functions
 - rest paramter = allows a function to accept an infinite numbers of arguments as an array. Function definition can have only 1 rest paramter and the rest paramter must be the last paramter
 - closure = the inner function, means the nested function is clousre thats it, simple definition.
 - inner function = can access the outer function's argument or any Variable that is declared in outer function
-- wese to hr function jese hi execute hota hai to ab iske andr create kiye gaye Variables bhi khatam hojaate hain, lekin closure ye hai ke outer ke function ke andr banaaye gaye Variable ya iska argument jo hai wo khatam nhi hota even after executing outer function, so isko ham baad mein use kr skte hain ye save rehta hai aur yehi closure hai
+- wese to hr function jese hi execute hota hai to ab iske andr create kiye gaye Variables bhi khatam hojaate hain, lekin closure yehi hai ke outer ke function ke andr banaaye gaye Variable ya iska argument jo hai wo khatam nhi hota even after executing outer function, so isko ham baad mein use kr skte hain ye save rehta hai aur yehi closure hai
 - Jab ek function execute hone ke baad bhi uske andar ka variable ya argument memory mein bacha rehta hai, aur usko inner function access kar sakta hai, to is concept ko closure kehte hain.
 - Yeh tab hota hai jab inner function outer function ke variables ko use karta hai — even after outer function finish ho jaaye.
 - callback function = is the function that we can pass to any function and call this function based on any condition at a later point of time
@@ -246,6 +247,12 @@ Day 14 - JavaScript Functions
 - IIFE (immediately invoked function expression) = a funciton expression where the code inside the function gets executed immediately after its been defined
 - call stack = when a function gets executed there is a stack that javascript engine maintains and it works like first in last out, jese hi javascript interpreter ko funciton call dikhta hai kisi line pr so us function ko call stack ke andr store krta hai aur execute hone pr stack se nikaal deta hai, so in short call stack means function execution stack
 - recursion = means a funciton refer or call itself, recursion use krte hue aapko make sure krna hai ke koi base condition hai jbhi recursion ka sahi use hoga aur sahi work karega. Base condition means under which condition you have to stop recursion
+
+Day 15: JavaScript Arrays
+Topics: creation, indexing, length, basic methods (push, pop)
+
+Day 16: JavaScript Objects
+Topics: object literals, properties, methods, dot/bracket notation
 
 Best array guide - freecodecamp = https://www.freecodecamp.org/news/javascript-array-tutorial-array-methods-in-js/
 
@@ -335,15 +342,18 @@ Default Exports = when you are most likely to use that single function, you simp
 - If you want to import the default function along with any other functions, you mix the bare 'default' function with other functions in curly braces
 
 Day 23 - Javascript Error Handling
-error handling = is used most when working with data from other sources or user input, it uses the keywords like try, catch, finally and throw
-try statement = lets you test a block of code for errors 
-catch statement = lets you handle the error 
-throw statement = lets you create custom errors 
-finally statement = lets you execute code after try and catch regardless of the result 
+- error handling = is used most when working with data from other sources or user input, it uses the keywords like try, catch, finally and throw
+- try statement = lets you test a block of code for errors 
+- catch statement = lets you handle the error 
+- throw statement = lets you create custom errors 
+- finally statement = lets you execute code after try and catch regardless of the result 
 - code mein error milte hi program ruk jaata hai aur direct catch statement mein chala jaata hai
 - jb error aata hai to JS eik obj banaaleta hai with error details jo catch ke parameter mein accessible hota hai hamein, is obj ki 2 properties bhi hoti hain name aur message; name => yaani referenceError aur message => wohi error msg
 - try catch sahi kaam karay iske liye zaroori hai code runnable ho yaani valid javascript ho koi wrong syntax naa ho
 - try catch does not handle parse time errors, it only handles runtime errors
+- koi error try block se bach nhi skta, pehle error aate hi baaqi instructions execute hone se ruk jaati haina aur try us error value ko pass krdeta hai catch block ke andr
+- .finally() ki tarh hi finally block work krta hai
+- try catch aur finally block ko async function ke andr use karen
 
 Day 24 - JavaScript RegEx (freecodecamp/learn)
 Topic: Patterns, Matching, Validation (email, numbers, etc.)
@@ -531,11 +541,12 @@ fetch("sample-url-goes-here")
 - Chain .catch() to the last .then(). Pass in a callback function with err as the parameter. Inside the callback, use console.error() to log possible errors to the console with the text `There was an error: ${err}`
 - Note: catch is the last call chained on to fetch, so you can terminate your code with a semicolon.
 - if there's an error and the data fail to load, then we need to show an error in the UI. That's exactly what the .catch() method is for – handling errors.
-- asynchronous = request the data from an API is known as an asynchronous operation, which means that tasks execute independently of the main program flow. You can use the async keyword to create an asynchronous function, which returns a promise. Example Code:
+- asynchronous = request data from an API is known as an asynchronous operation, which means that tasks execute independently of the main program flow. You can use the async keyword to create an asynchronous function, which returns a promise. Example Code:
 const example = async () => {
   console.log("this is an example");
 };
-try...catch statement = to handle erros, try block is designed to handle potential errors, and the code inside the catch block will be executed in case an error occurs. Example Code
+- async function jo kch bhi return krta hai wohi resulting promise ki resolve value ban jaati hai, wrna undefined
+- try...catch statement = to handle erros, try block is designed to handle potential errors, and the code inside the catch block will be executed in case an error occurs. Example Code
 try {
   const name = "freeCodeCamp";
   name = "fCC";
@@ -543,7 +554,7 @@ try {
   console.log(err); // TypeError: Assignment to constant variable.
 }
 - we used fetch() with the .then() method to perform logic after the promise was resolved. But we can also use the await keyword to handle the asynchronous nature of the fetch() method.
-await keyword = waits for a promise to resolve and returns the result. Example Code:
+- await keyword = waits for a promise to resolve and returns the result. promise se pehle isko place krte hain aur ye async function ke liye eik indicator hai ke pause hojao jb tk promise settle naa ho. Example Code:
 const example = async () => {
   const data = await fetch("https://example.com/api");
   console.log(data);
@@ -556,3 +567,75 @@ const example = async () => {
 minutes = Math.floor((currentTime - lastPost) / 60000);
 hours = Math.floor((currentTime - lastPost) / 3600000);
 days = Math.floor((currentTime - lastPost) / 86400000);
+
+Day 32 – JavaScript Promises
+Topic: Creating, resolving, and chaining Promises. Refactor async app with
+.then() and .catch(). Change yesterday’s weather app from async/await to use:
+.then() for handling success, .catch() for handling errors, chaining multiple .then() if needed
+- JavaScript widely known for its major features: it is single-threaded, non-blocking, and asynchronous.
+- single threaded = it means the language can execute only one instruction at a time. This differs from multi-threaded programming languages that run multiple instructions at once.
+- non-blocking = it means that the language does not wait for a specific previous instruction to finish executing before it moves to the next one. This ensures that no instruction blocks the execution of subsequent instructions.
+- If a programming language is not non-blocking, it could lead to slow applications.
+- asynchronous = means that javascript can handle a large number of tasks at a time. This is a feature of multi-threaded programming languages, but JavaScript achieves it with a single thread.
+- Multi-threaded programming = a program can be split into separate threads, with each executing independently of the others.
+- For a browser to interpret JavaScript code, it needs to have a JavaScript engine.
+- JavaScript step by step, top to bottom execute hoti hai, pehle pehla task, phir doosra, phir teesra...
+- For a browser to interpret JavaScript code, it needs to have a JavaScript engine. 
+- js engine = is a software component of a modern web browser that accepts JavaScript code, analyzes it, and transforms it into instructions the device will understand. Different engines have individual differences, but their jobs still remain the same. They process JavaScript Code.
+- JavaScript runtime = is the environment that contains all the resources necessary for the execution of a JavaScript program. It includes the JavaScript Engine but also includes other things.
+- call stack = is a component of a JavaScript Engine that keeps track of all the functions the program executes. It is a Stack data structure that operates with two key operations: 1. Push: adds or pushes a new function onto the top of the stack. The stack can only add new entries to the top. 
+2. Pop: removes or pops a new function off of the top of the stack. The Stack can only remove new entries from the top.
+- Last In First Out (LIFO) is a term that summarizes how the call stack works. The last operation that went in is the first operation that will leave the stack.
+- After the JavaScript Engine receives JavaScript code, it parses the code and places the first function it encounters on the call stack. If, while executing that function, the JavaScript engine notices that it calls other functions, then those functions are stacked on top of the call stack. This is very important for functions nested in other functions as well as recursive functions.
+- For the stack to pop off a function, the engine must have finished interpreting and running that function. If not, it remains there.
+- even though JavaScript is single-threaded, it is also asynchronous.
+- whenever JavaScript encounters asynchronous instructions like requests to third-party sites, or timer-based actions, it seeks assistance. To achieve this, JavaScript uses the browser’s provided Web Application Programming Interfaces (Web APIs).
+- One very important reason for writing asynchronous code = is to prevent a scenario where a particular running function ends up blocking the rest of the code. If this happens, it can cause undesirable user experiences and make our software inefficient.
+- The Web APIs = are a set of functions provided by the browser that the JavaScript engine can utilize. They include examples such as Document Object Model (DOM) manipulation methods, fetch, setInterval, setTimeout, promises, async-await functions, and more.
+- Asynchronous operations provide a response after being processed using Web APIs. 
+- The purpose of writing an asynchronous function is to utilize the function's output for subsequent operations. We refer to the functions that rely on the response from asynchronous operations as callback functions.
+- a callback function = is passed in as an argument to an asynchronous function and only runs when the asynchronous operation has been completed
+- Callback Queue in browser’s JavaScript Runtime = is a software mechanism that stores callback functions to be run after the Web APIs have processed asynchronous functions. It uses the queue data structure which works with the First In First Out (FIFO) approach. means that the first callback added to that queue is going to be the first callback to leave.
+- The event loop = is a loop that continuously checks if the call stack is empty. When the call stack is not empty, it allows the ongoing process to continue. But when the call stack becomes empty, the event loop fetches the task at the top of the callback queue and adds it to the call stack.
+- The event loop runs continuously as long as the program is running, always performing its function until the callback queue is completely empty. This is why the JavaScript Engine executes callbacks only after everything in the call stack has been processed.
+- promises = There are a few asynchronous features in JavaScript, and one of them is Promises.
+- nested callbacks led to the ‘Callback Pyramid of Doom’ or callback hell, which can quickly become a nightmare. So JavaScript introduced Promises as part of ES6 (ES2015) to solve this problem.
+- A promise is an assurance or guarantee that something will happen in the future. In JavaScript, a Promise is an object that will produce a single value some time in the future. If the promise is successful, it will produce a resolved value, but if something goes wrong then it will produce a reason why the promise failed.
+- JavaScript promises can be in one of three possible states. These states indicate the progress of the promise. They are:
+1. pending: This is the default state of a defined promise
+2. fulfilled: This is the state of a successful promise
+3. rejected: This is the state of a failed promise
+- A promise goes from pending to fulfilled, or from pending to rejected
+- ‘fulfilled’ and ‘rejected’ indicate the end of a promise. 
+- resolve = In promises, resolve is a function with an optional parameter representing the resolved value.
+- reject = is a function with an optional parameter representing the reason why the promise failed.
+- To create a callback for a promise, you need to use the .then() method. 
+.then() method = takes in two callback functions. The first function runs if the promise is resolved, while the second function runs if the promise is rejected.
+- When you handle a promise with the .then() method, the operation always returns another promise.
+- To handle errors in Promises, use the .catch() method. If anything goes wrong with any of your promises, this method can catch the reason for that error.
+- .catch() method = agr promise reject hojaaye to error ko handle krleta hai, aur eik naya fulfilled promise return krta hai with undefined value agr aapne kch return nhi kia. Mtlb reject hone waala promise .catch() ke baad fulfilled ban jaata hai
+- You can also use the .catch() method in a chain of promises. It catches the first error it encounters in the chain.
+- You can also use .catch() to check for errors in a group of promises before proceeding with further asynchronous operations. It addresses any errors in a promise without requiring the nesting of error callback functions.
+- .finally() = To chain an asynchronous operation to a promise regardless of if the promise is resolved or not, use this method. Bcuz sometimes you might want an operation to run no matter what happens to earlier promises. It is for operations you must run whether there is an error or not.
+- Promise ke reject hone ka matlab error throw karna nahi hota, lekin agar tum us rejection ko handle nahi karte, to JS warning/error throw kar deta hai. isliye promise rejection ko hamesha handle krna chahiye .catch() se wrna runtime error milega
+- It is possible to run more than one promise at a time, means you could have multiple promises that run in parallel. Here are the available methods that can help us achieve this:
+1. Promise.all() = argument mein array of promises leta hai aur return krta hai eik single promise, agr diye gaye saare promises fulfilled hogaye to wo single promise eik array of values resolve krta hai jis mein diye gaye har promise ki resolve value hoti hai. Input array mein agr eik bhi promise resolve naa ho to promise.all() rejected promise return krta hai with a reason. Reason for rejection jo first rejected promise ka hota hai wohi same rehta hai. promise.all() saare input promises ko run krta hai uske baad hi kch return krta hai, aur ye sb promises ko eik sth run krta hai isiliye input array mein jo promise sbse zaada time lagaata hai utna hi time promise.all() leta hai sbko run krne mein 
+2. Promise.race() = bhi array of promises leta hai as an argument, aur fastest promise return krta hai chaahe resolve ho ya reject bs jis promise ka execution time sbse shortest ho us single promise ko return krdega. Ye method bhi promises ko eik sth run krta hai parallel. Agr rejected promise sbse fastest ho to ye isi ko return karega with the reason. Ye method wahan useful hai jahan ham list of asynchronous operations run karen but hamein sirf fastest executed operation ka result chahiye ho
+3. Promise.any() = ye bhi array of promises leta hai as an argument aur us array mein se first resolved promise ko return krta hai yaani wait krta hai kisi bhi promise ke resolve hone ka aur immediately usko return krdeta hai as the output. Agr koi bhi promise resolved naa ho to promise.any() rejected promise return krta hai jis mein array hota hai with reason of rejection of all promises individually, error.stack jis mien aggeragtion error dikhta hai aur error.message bhi hota hai. Ye method wahan useful hai jb hamein asynchronous operations mein se fastest resolved promise chahiye ho
+4. Promise.allSettled() = ye method es2020 ki release ke sth JS promises ka feature bana jo sb promises ko eik sth handle krte hai baaqi methods ki tarh. Ye bhi array of promises leta hai as an argument aur return krta hai eik single promises jo hamesha resolve ya fulfilled state mein hota hai, input array mein koi bhi promise rejected ho tb bhi is method ko koi farq nhi prta ye fulfilled promise hi retun karega chaahe sb promise reject hojaayen. ye method array of objects ke sth resolve hota hai jis mein input promises ka status aur resolved promises ki value wrna rejected promises ka reason hota hai. Is ko use krne se hamein apne tamam promises ka overview milta hai kisne kia kaam kia
+- Job queue = also known as microtask queue jo asal mein js runtime ka component nhi tha but jb promises js ka part banay tb iski bhi need pargai
+- in javascript, promise baaqi async implementtions se fast kaam krta hai aur fast hota hai. ye to ham prh chuke ke event loop async operations ko handle krta hai aur async instructions ke callback functions ko jbhi call kr skta hai jb callstack empty ho. But JS runtime mein ye 2 queues hote hain: callback (ya macrotask) queue, aur job (ya microtask) queue. Callback queue mein saare functions ko call krne se pehle event loop job queue mein saare functions ko call krta hai aur promise ka callback job queue mein rehta hai so event loop isko pehle call krta hai. Isi liye promises baaqi sb async implementation se zaada fast values return krte hain
+- promise undefined tb return karta hai jab hamne callback se koi value return nahi ki ho. Ye bs .then() ka return value hai
+- Important Rules:
+1. .then() Hamesha Ek Naya Promise Return Karta Hai
+2. Agar .then() me return karo → wo value next promise ka result ban jaati hai 
+3. Agar kuch return na karo → wo undefined ban jata hai
+4. .catch() Bhi Ek Naya Promise Return Karta Hai, aur error handle karke promise ko fulfill kar deta hai.
+5. Even agar promise turant resolve ho jaye, .then() ka callback tb bhi baad mein chalega (microtask queue me).
+- Master Formula (Yaad Rakhne Wala Shortcut)
+Banana: new Promise((resolve, reject) => {...})
+Fulfill: resolve(value)
+Reject: reject(reason)
+Consume: .then(result => ...) .catch(error => ...)
+Chain: Hamesha return karo agar aagay use karna hai.
+

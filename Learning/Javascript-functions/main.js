@@ -36,7 +36,7 @@ function doSomething() {
     console.log(x, y, z)
 }
 
-// console.log(z) z is not defined
+// console.log(z) // z is not defined
 
 // doSomething();
 
@@ -50,7 +50,6 @@ function outer(x) {
 
 const outerReturn = outer(10);
 // console.log(outerReturn(20))
-
 
 // callback function
 function foo(fun) {

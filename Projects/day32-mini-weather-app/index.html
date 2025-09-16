@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Weather App using .then and .catch</title>
+</head>
+
+<body>
+    <h1>Mini Weather App (.then and .catch)</h1>
+    <input type="text" name="" id="city-name-input">
+    <button id="get-weather-btn">Get weather</button>
+    <div id="weather-output"></div>
+
+    <script>
+        const cityNameInput = document.querySelector("#city-name-input");
+        const getWeatherBtn = document.querySelector("#get-weather-btn");
+        const weatherOutput = document.querySelector("#weather-output");
+
+        const displayWeather = ({ weather, main, name }) => {
+            const { temp, feels_like, humidity } = main;
+            weatherOutput.innerHTML = `
+                <p>Result for <strong>${name}</strong></p>
+                <p>${temp}<sup>o</sup>C</p>
+                <p>${weather[0].main}</p>
+                <p>Feels like: ${feels_like}</p>
+                <p>Humidity: ${humidity}%</p>
+            `;
+        }
+
+        const fetchWeather = (cityName) => {
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=8f8e0395c42b4783f1fe4e1c17a49c83&units=metric`)
+                .then(response => {
+                    if (response.status === 404) {
+                        throw new Error("City not found")
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayWeather(data)
+                })
+                .catch(error => {
+                    console.error(error)
+                    weatherOutput.innerHTML = "<p style='color:red;'>❌ City not found</p>"
+                })
+        }
+
+        getWeatherBtn.addEventListener("click", () => {
+            const cityName = cityNameInput.value;
+            fetchWeather(cityName)
+        });
+    </script>
+</body>
+
+</html>
