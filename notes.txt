@@ -569,9 +569,8 @@ hours = Math.floor((currentTime - lastPost) / 3600000);
 days = Math.floor((currentTime - lastPost) / 86400000);
 
 Day 32 – JavaScript Promises
-Topic: Creating, resolving, and chaining Promises. Refactor async app with
-.then() and .catch(). Change yesterday’s weather app from async/await to use:
-.then() for handling success, .catch() for handling errors, chaining multiple .then() if needed
+Topics: Creating, resolving, and chaining Promises. Refactor async app with
+.then() and .catch(). Change yesterday’s weather app from async/await to use: .then() for handling success, .catch() for handling errors, chaining multiple .then() if needed
 - JavaScript widely known for its major features: it is single-threaded, non-blocking, and asynchronous.
 - single threaded = it means the language can execute only one instruction at a time. This differs from multi-threaded programming languages that run multiple instructions at once.
 - non-blocking = it means that the language does not wait for a specific previous instruction to finish executing before it moves to the next one. This ensures that no instruction blocks the execution of subsequent instructions.
@@ -639,3 +638,19 @@ Reject: reject(reason)
 Consume: .then(result => ...) .catch(error => ...)
 Chain: Hamesha return karo agar aagay use karna hai.
 
+Day 33 - Fetch API
+Topics: Making HTTP requests, handling responses, JSON parsing.
+- free apis list = https://free-apis.github.io/#/categories
+- base url = saare links is se shuru hongay
+- browser pr ham koi bhi link paste krte hain to ye hamein data laake return krdeta hai jese google.com likhne pr google ka homepage aajata hai but agr hamein yehi kaam JS mein krna ho to iske liye ham fetch api use krte hain data bhejne aur recieve krne ke liye jo Request aur Response objects ka use krti hai
+- fetch api ka mtlb hai fetch method ko use krna jo data fetch krne ke kaam aata hai ham url dete hain isko aur ye direct data get krke eik promise return krta hai:
+fetch(url, [options])
+- status 200 = mtlb successful request
+- jb bhi ham fetch method ko koi bhi options nhi dete, to ye by default GET request krta hai yaani data get krta hai
+- AJAX = is asynchronous JS & XML, pehle zamaane mein jb bhi data hamare paas aata tha wo xml format mein aata tha aur ab json format mein aata hai 
+- JSON = javascript object notation, javascript object ki tarh hota nhi hai sirf dikhaayi deta hai us jesa
+- json() method = asynchronous method hai, JSON ko javascript object mein convert krta hai aur promise return krta hai, in short data ko readable form mein banaata hai
+- HTTP verbs = http (hyper text transfer protocol) request methods like GET, POST, DELETE, PUT, PATCH etc. bht zaada hain lekin mostly yehi use hote hain, PUT use hota hai agr saare data ko change krna ho update krna ho aur PATCH use hota hai jb kch modifications krni hon
+- protocol = means rules
+- status codes = ye response obj mein hote hain aur code ke through bataate hain ke request ka kesa response raha, generally 200s ka mtlb hai successful, 400s ka mltb hai client side error, 404 means page not found, 500s is server error
+- http headers = ye request aur response dono ke sth hote hain ham bhej bhi skte hain aur hamein recieve bhi hota hai, ye basically extra information hoti hai jese content ka type kia hai, status code wagera
