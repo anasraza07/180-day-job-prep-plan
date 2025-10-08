@@ -17,22 +17,22 @@
         <form action="">
             <div class="amount">
                 <label for="">Enter Amount</label>
-                <input type="text" value="100">
+                <input type="number" value="1">
             </div>
             <div class="dropdown">
                 <div class="from">
                     <label for="">From</label>
                     <div class="select-container">
-                        <img src="" alt="">
-                        <select id="from-select"></select>
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="">
+                        <select name="from" id="from-select"></select>
                     </div>
                 </div>
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 <div class="to">
                     <label for="">To</label>
                     <div class="select-container">
-                        <img src="" alt="">
-                        <select id="to-select"></select>
+                        <img src="https://flagsapi.com/PK/flat/64.png" alt="">
+                        <select name="to" id="to-select"></select>
                     </div>
                 </div>
             </div>
@@ -41,6 +41,7 @@
         </form>
     </div>
 
+    <script type="module" src="./country-list.js"></script>
     <script type="module" src="./app.js"></script>
 </body>
 

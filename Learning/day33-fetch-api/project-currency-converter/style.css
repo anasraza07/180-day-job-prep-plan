@@ -13,13 +13,14 @@ body {
 }
 
 .container {
+  flex: 1;
   background-color: #48392a;
   /* background-color: #fff; */
   padding: 1rem;
   /* color: #F96F5D; */
   color: #fff;
   max-width: 350px;
-  width: 90%;
+  /* width: 90%; */
   border-radius: 0.5rem;
 }
 
@@ -47,6 +48,7 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: .5rem;
   margin: 1rem 0;
 }
 
@@ -81,6 +83,8 @@ select option {
 
 .msg{
   min-height: 20px;
+  /* font-weight: bold; */
+  margin-top: 2rem;
 }
 
 .btn {
@@ -88,7 +92,8 @@ select option {
   background-color: #f96f5d;
   border: none;
   padding: 0.75rem 0;
-  color: #43281c;
+  /* color: #43281c; */
+  /* color: ; */
   font-weight: bold;
   font-size: 1rem;
   border-radius: 8px;

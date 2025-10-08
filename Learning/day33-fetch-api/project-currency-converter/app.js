@@ -1,6 +1,7 @@
 import { countryList } from "./country-list.js";
 
-const form = document.querySelector("form")
+// MY CODE //
+/* const form = document.querySelector("form")
 const selectInputs = document.querySelectorAll("select");
 
 // rendering options
@@ -42,7 +43,6 @@ function showMsg(rate) {
     msgElement.innerHTML = `1${from} = ${rate}${to}`
 }
 
-
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     console.log("Amount:", this[0].value);
@@ -64,4 +64,60 @@ function changeFlag(element, code) {
         const img = element.previousElementSibling;
         img.src = `https://flagsapi.com/${countryList[code]}/flat/64.png`;
     }
+} */
+
+// MORE BETTER CODE
+const dropdowns = document.querySelectorAll(".select-container select");
+const btn = document.querySelector(".btn");
+const fromCurr = document.querySelector("#from-select");
+const toCurr = document.querySelector("#to-select");
+const msg = document.querySelector(".msg");
+
+window.addEventListener("load", updateExchangeRate)
+
+btn.addEventListener("click", updateExchangeRate)
+
+async function updateExchangeRate(e) {
+    e.preventDefault();
+    const amountInput = document.querySelector(".amount input");
+    let amountValue = document.querySelector(".amount input").value;
+    if (amountValue == "" || amountValue < 0) {
+        amountInput.value = "1";
+        amountValue = 1;
+    }
+
+    const baseURL = "https://latest.currency-api.pages.dev/v1/currencies";
+    const from = fromCurr.value.toLowerCase();
+    const to = toCurr.value.toLowerCase();
+    const response = await fetch(`${baseURL}/${from}.json`)
+    const data = await response.json()
+    const rate = data[from][to];
+    const finalAmount = amountValue * rate;
+    msg.innerHTML = `${amountValue} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
+}
+
+for (let select of dropdowns) {
+    for (let currCode in countryList) {
+        const option = document.createElement("option");
+        option.innerText = currCode;
+        option.value = currCode;
+        if (select.name == "from" && currCode == "USD") {
+            option.selected = "selected"
+        } else if (select.name == "to" && currCode == "PKR") {
+            option.selected = "selected"
+        }
+        select.appendChild(option);
+    }
+
+    select.addEventListener("change", (event) => {
+        updateFlag(event.target)
+    })
+}
+
+function updateFlag(element) {
+    const currCode = element.value;
+    const countryCode = countryList[currCode];
+    const img = element.parentElement.querySelector("img");
+    const newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
+    img.src = newSrc;
 }
