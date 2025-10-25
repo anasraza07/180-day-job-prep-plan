@@ -1,4 +1,4 @@
-// try, catch and finally
+ // try, catch and finally
 
 try {
     console.log("Start of try runs")
